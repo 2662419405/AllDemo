@@ -40,17 +40,21 @@
         </tr>
       </table>
     </div>
-    <card :shopData="shopData"></card>
+    <card :shopData="shopData" @removeItem="remove"></card>
   </div>
 </template>
 
 <script>
 import Card from './components/Card';
+import './index.scss'
 export default {
   components:{
     Card
   },
   methods: {
+    remove(index){
+      this.shopData.splice(index,1)
+    },
     addCourseMethod(){
       this.currentList.push(this.addCourse)
       this.addCourse = {}
@@ -96,7 +100,7 @@ export default {
 
 <style>
 td,th{
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #000;
 }
 #app {

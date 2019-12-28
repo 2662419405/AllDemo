@@ -11,7 +11,7 @@
       </tr>
       <tr v-for="(item,index) in shopData" :key="item.id">
         <td>
-          {{item.id}}
+          <input type="checkbox" v-model="item.isActive" />
         </td>
         <td>
           {{item.name}}
@@ -28,6 +28,17 @@
           {{item.num*item.price}}
         </td>
       </tr>
+      <tr>
+        <td>
+
+        </td>
+        <td colspan="2">
+          {{isActiveCourse}}/{{allCourseList}}
+        </td>
+        <td colspan="2">
+          {{allPrice}}
+        </td>
+      </tr>
     </table>
   </div>
 </template>
@@ -38,7 +49,9 @@ export default {
   methods: {
     minus(index){
       if(this.shopData[index].num==1){
-        return false
+        if(window.confirm('你确定要删除这个选项吗?')){
+          this.$emit('removeItem',index)
+        }
       }
       this.shopData[index].num--;
     },
@@ -46,8 +59,30 @@ export default {
       this.shopData[index].num += 1;
     }
   },
+  computed: {
+    isActiveCourse(){
+      return this.shopData.filter((v)=>{
+        return v.isActive===true
+      }).length;
+    },
+    allCourseList(){
+      return this.shopData.length
+    },
+    allPrice(){
+      let num = 0;
+      this.shopData.forEach(item=>{
+          if(item.isActive){
+              num+= item.price * item.num
+          }
+      })
+      return num;
+    }
+  },
 };
 </script>
 
 <style>
+td{
+  padding: 20px;
+}
 </style>
