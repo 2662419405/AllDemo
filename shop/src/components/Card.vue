@@ -9,9 +9,9 @@
         <td>数量</td>
         <td>价格</td>
       </tr>
-      <tr v-for="(item) in shopData" :key="item.id">
+      <tr v-for="(item,index) in shopData" :key="item.id">
         <td>
-          
+          {{item.id}}
         </td>
         <td>
           {{item.name}}
@@ -20,10 +20,12 @@
           {{item.price}}
         </td>
         <td>
-
+          <button @click="minus(index)">-</button>
+          {{item.num}}
+          <button @click="add(index)">+</button>
         </td>
         <td>
-          
+          {{item.num*item.price}}
         </td>
       </tr>
     </table>
@@ -32,7 +34,18 @@
 
 <script>
 export default {
-  props:['shopData']
+  props:['shopData'],
+  methods: {
+    minus(index){
+      if(this.shopData[index].num==1){
+        return false
+      }
+      this.shopData[index].num--;
+    },
+    add(index){
+      this.shopData[index].num += 1;
+    }
+  },
 };
 </script>
 

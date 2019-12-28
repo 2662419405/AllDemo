@@ -56,15 +56,23 @@ export default {
       this.addCourse = {}
     },
     addCourseCard(index){
-      this.shopData.push(this.currentList[index])
+      let item = this.currentList[index]
+      let hasCourse = this.shopData.find((v)=>v.id == item.id)
+      if(hasCourse){
+        hasCourse.num += 1
+      }else{
+        this.shopData.push({
+          ...item,
+          num: 1,
+          isActive: true
+        })
+      }
     }
   },
   data() {
     return {
       title:'这里是购物车',
-      shopData:[
-
-      ],
+      shopData:[],
       addCourse:{
         name:'',
         price:''
@@ -90,5 +98,13 @@ export default {
 td,th{
   padding: 20px;
   border: 1px solid #000;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
