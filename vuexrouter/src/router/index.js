@@ -30,6 +30,7 @@ const routes = [
         component: Php,
       },{
         path: 'html/:id',
+        name: 'html',
         component: Html,
       }
     ]
