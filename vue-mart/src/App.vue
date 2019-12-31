@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <template v-if="$store.state.isLogin">
-      <cube-button :primary="true" >注销</cube-button>
+      <cube-button :primary="true" @click="logout">注销</cube-button>
     </template>
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -15,7 +15,7 @@
 export default {
   methods: {
     logout(){
-
+      this.$store.dispatch('logout')
     }
   },
 }

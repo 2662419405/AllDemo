@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isLogin: false,
+    isLogin: localStorage.getItem('token') ? true : false ,
     userInfo: {}
   },
   mutations: {
@@ -35,6 +35,13 @@ export default new Vuex.Store({
           commit('setInfoSetting',res.data.data)
         }
       })
+    },
+    logout({commit}){
+      // 清楚缓存
+      window.console.log('1')
+      localStorage.removeItem('token')
+      // 重置状态
+      commit("setLoginState",false)
     }
   },
   modules: {
