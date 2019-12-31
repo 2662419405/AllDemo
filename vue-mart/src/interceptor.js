@@ -1,9 +1,3 @@
-# vue-mart
-
-#### 技术栈: vue vuex vue-router cube-ui
-
-> 拦截器的制作
-```js
 //  拦截请求
 import axios from 'axios'
 
@@ -16,4 +10,3 @@ export default function(){
         return config;
     })
 }
-```

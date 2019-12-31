@@ -15,6 +15,9 @@
 
 <script>
 export default {
+  created() {
+    this.$store.dispatch('getInfo')
+  },
   data() {
     return {
       model: {
@@ -65,12 +68,12 @@ export default {
   methods: {
     handleLogin(e){
       e.preventDefault()
-      this.$store.dispath('login',this.model)
+      this.$store.dispatch('login',this.model)
         .then((res)=>{
           if(res){
             // 登录成功,重定向
             const path = this.$route.query.redirect || '/' ;
-            this.$route.push(path)
+            this.$router.push(path);
           }
         }).catch((error)=>{
           // 有错误发生了 

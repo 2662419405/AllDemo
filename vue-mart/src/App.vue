@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <template v-if="$store.state.isLogin">
+      <cube-button :primary="true" >注销</cube-button>
+    </template>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/login">Login</router-link> |
@@ -8,7 +11,15 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    logout(){
 
+    }
+  },
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
