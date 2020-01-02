@@ -16,3 +16,17 @@
 2. 是从上下文的request对象中获取
 请求对象ctx.request.query，返回如 { a:1, b:2 }
 请求字符串 ctx.request.querystring，返回如 a=1&b=2
+
+* 使用POST获取数据
+
+* 使用koa-bodyparser中间件
+
+## 静态资源的加载
+
+* 使用koa-static加载
+`app.use(static(path.join(__dirname,staticPath)))`
+
+## cookie/session
+
+* ctx.cookies.get(name, [options]) 读取上下文请求中的cookie
+* ctx.cookies.set(name, value, [options]) 在上下文中写入cookie
