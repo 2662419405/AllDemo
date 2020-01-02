@@ -9,7 +9,7 @@
     "start": "vue-cli-service serve"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "cube-ui": "~1.12.1",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
