@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component,useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './components/context/Header'
 import Footer from './components/context/Footer'
 import './app.css'
+
+const AppContext = React.createContext({})
 
 export default class home extends Component {
     render() {
@@ -15,11 +17,13 @@ export default class home extends Component {
                     <br />
                     <Link to='/next'>useState组件</Link>
                 </div>
-                <div>
+                <AppContext.Provider value={{
+                    username: 'sun'
+                }}>
                     useContext练习
                     <Header />
                     <Footer />
-                </div>
+                </AppContext.Provider>
             </div>
         )
     }

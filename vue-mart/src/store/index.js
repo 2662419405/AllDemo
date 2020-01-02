@@ -19,9 +19,9 @@ export default new Vuex.Store({
   actions: {
     login({commit},user) {
     // 登录请求 , 控制器
-      return axios.get('http://shtodream.cn:7300/mock/5e08a4657d30fb4da2043fcb/demo/users').then((res)=>{
-        const { token,username,password } = res.data;
-        if(user.username == username && password == user.passwd){
+      return axios.get('/api/login',{params:user}).then((res)=>{
+        const { token } = res.data;
+        if(token){
           // 登录成功
           commit('setLoginState',true);
           localStorage.setItem('token',token)
@@ -30,7 +30,7 @@ export default new Vuex.Store({
       })
     },
     getInfo({commit}){
-      axios.get('http://shtodream.cn:7300/mock/5e08a4657d30fb4da2043fcb/demo/userinfo').then((res)=>{
+      axios.get('/api/userinfo').then((res)=>{
         if(res.data.data){
           commit('setInfoSetting',res.data.data)
         }

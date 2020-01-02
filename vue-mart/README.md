@@ -30,3 +30,25 @@ export default function(vm){
     })
 }
 ```
+
+> 解决跨域问题
+
+```js
+configureWebpack: {
+    devServer: {
+        proxy: {
+        "/api": {
+            target: "http://127.0.0.1:3000/", 
+            changOrigin: true
+        }
+        }, 
+    }
+}
+```
+
+## 启动
+启动后台token
+```js
+cd server
+nodemon server.js
+```

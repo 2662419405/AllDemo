@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div>
-                我是Header组件
-            </div>
-        )
-    }
+const AppContext = React.createContext({})
+
+export default function Header(){
+    const { username } = useContext(AppContext)
+    return (
+        <div>
+            我是Header组件
+            message for useContext {username}
+        </div>
+    )
 }
