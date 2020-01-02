@@ -30,3 +30,22 @@
 
 * ctx.cookies.get(name, [options]) 读取上下文请求中的cookie
 * ctx.cookies.set(name, value, [options]) 在上下文中写入cookie
+
+## koa2和koa-view模板渲染
+
+```js
+app.use(views(path.join(__dirname,'./view'),{
+    extension: 'ejs'
+}))
+
+app.use( async (ctx)=>{
+    let title = '我是koa渲染模板';
+    let arr = ['java','php']
+    await ctx.render('index',{
+        title,
+        arr
+    })
+} )
+```
+
+## 文件上传
