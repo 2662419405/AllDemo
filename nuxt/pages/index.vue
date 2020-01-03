@@ -4,6 +4,14 @@
       <logo />
       <nuxt-link to="/users">用户列表</nuxt-link>
       <nuxt-link to="/users/detail">用户详情列表</nuxt-link>
+      <h2>通过routepush跳转路由</h2>
+      <el-button @click=" $router.push('/users/detail') ">去详情页</el-button>
+      <h2>通过name路由跳转</h2>
+      <el-button @click=" $router.push({name:'users-detail',query:{username:'sunhang',passwd:'123'}}) ">name跳转</el-button>
+      <h2>跳转到动态路由</h2>
+      <el-button @click=" $router.push({name: 'users-id',params: {id:1}}) ">name跳转</el-button>
+      <h2>前往错误页面</h2>
+      <el-button @click=" $router.push({path: '/users/good'}) ">错误</el-button>
     </div>
   </div>
 </template>
@@ -14,7 +22,8 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
-  }
+  },
+  layout: 'header'
 }
 </script>
 

@@ -14,4 +14,4 @@
 6. vue完整项目 -> [完整项目](/vue-mart2)
 7. React hook练习 -> [React hooks](/hooks)
 8. github学习koa -> [koa](/koaGithub)
-9. vueSSR渲染 -> [nuxt](/nuxt)
+9. vueSSR渲染 -> [nuxt](/nuxt) 

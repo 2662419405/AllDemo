@@ -4,7 +4,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from './components/nuxt-error.vue'
+import NuxtError from '..\\layouts\\error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,6 +13,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_axios_f6956020 from 'nuxt_plugin_axios_f6956020' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_elementui_d905880e from 'nuxt_plugin_elementui_d905880e' // Source: ..\\plugins\\element-ui (mode: 'all')
+import nuxt_plugin_router_3f7e063d from 'nuxt_plugin_router_3f7e063d' // Source: ..\\plugins\\router (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -152,6 +153,10 @@ async function createApp (ssrContext) {
 
   if (typeof nuxt_plugin_elementui_d905880e === 'function') {
     await nuxt_plugin_elementui_d905880e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_router_3f7e063d === 'function') {
+    await nuxt_plugin_router_3f7e063d(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
