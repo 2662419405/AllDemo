@@ -12,3 +12,14 @@ npm run build
 npm i -g serve
 serve -s dist
 ```
+
+## vue生命周期
+
+1. beforeCreate
+2. created
+3. beforeMount
+4. mounted
+5. beforeUpdate
+6. updated
+7. beforeDestroy
+8. destroyed
