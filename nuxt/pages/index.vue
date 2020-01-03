@@ -12,6 +12,12 @@
       <el-button @click=" $router.push({name: 'users-id',params: {id:1}}) ">name跳转</el-button>
       <h2>前往错误页面</h2>
       <el-button @click=" $router.push({path: '/users/good'}) ">错误</el-button>
+      <h2>去获取数据的页面</h2>
+      <el-button @click=" $router.push({path: '/data'}) ">数据</el-button>
+      <h2>使用axios代理解决跨域问题,并且尝试从后台获取数据</h2>
+      <el-button @click=" $router.push({name: 'home-id',params: {id:1}}) ">首页获取数据</el-button>
+      <h2>使用vuex获取数据</h2>
+      <el-button @click=" $router.push({path: '/about'}) ">vuex</el-button>
     </div>
   </div>
 </template>

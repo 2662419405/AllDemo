@@ -7,6 +7,9 @@
 
 <script>
 export default {
+  head:{
+    title: '我是用户页面'
+  }
 }
 </script>
 
