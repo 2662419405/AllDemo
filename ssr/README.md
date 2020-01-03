@@ -1,6 +1,29 @@
-# vue-server-renderer渲染 
+# vue-ssr
 
-## 渲染一个简单的vue实例 [demo](./demo)
+## Project setup
+```
+npm install
+```
 
-## 服务端集成 [express](./server)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

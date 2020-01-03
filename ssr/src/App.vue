@@ -1,16 +1,26 @@
 <template>
-  <div>
-    我是首页
-    <router-link to="/home">去首页</router-link>
-    <router-link to="/users">去用户页</router-link>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <ul>
+      <li>
+        <router-link to="/">首页</router-link>
+      </li>
+      <li>
+        <router-link to="/kkb">开课吧</router-link>
+      </li>
+    </ul>
     <router-view></router-view>
   </div>
+
+
 </template>
 
 <script>
 
+export default {
+  name: 'app',
+}
 </script>
 
-<style lang='stylus' scoped>
-
+<style>
 </style>

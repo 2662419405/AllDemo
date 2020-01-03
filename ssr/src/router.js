@@ -1,26 +1,18 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from './components/Home.vue'
-import User from './components/users.vue'
+// router.js
+import Vue from 'vue'
+import Router from 'vue-router'
+import Index from './components/Index'
+import Kkb from './components/Kkb'
+Vue.use(Router)
 
-Vue.use(VueRouter)
 
-const routes = [
-    {
-        path: '/home',
-        name: 'home',
-        component: Home
-    },
-    {
-        path: '/users',
-        name: 'users',
-        component: User
-    }
-]
-
-const Router = new VueRouter({
-    routes,
-    mode: 'history'
-})
-
-export default Router;
+export function createRouter () {
+  return new Router({
+    mode: 'history',
+    routes: [
+        {path:"/",component:Index },
+        {path:"/kkb",component:Kkb },
+      // ...
+    ]
+  })
+}
