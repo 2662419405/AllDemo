@@ -1,7 +1,14 @@
-# 类型注解
+<template>
+  <div>
+    {{ msg }}
+    <br />
+    {{ name }}
+  </div>
+</template>
 
-ts的基本使用
-```js
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
 // 类型注解 必须是小写
 let title: string;
 let name = 'xx'; //类型推断
@@ -42,4 +49,8 @@ export default class Hello extends Vue{
     //   required: true
     // }
 }
-```
+</script>
+
+<style lang='stylus' scoped>
+
+</style>
