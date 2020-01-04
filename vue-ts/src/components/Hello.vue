@@ -38,6 +38,14 @@ function warn():void{
 
 // 内置类型: string,number,boolean,void,any
 
+// ts函數中如果声明,就是必选参数 加上问号就代表可选参数
+function sayHello(name:string, age?:number, sex:number = 0):( string | number ){
+  return name + ' ' + age + sex;
+}
+
+sayHello('tom',20)
+// sayHello('tom') 报错
+
 // 装饰器注解 
 @Component
 export default class Hello extends Vue{
@@ -49,6 +57,18 @@ export default class Hello extends Vue{
     //   required: true
     // }
 }
+
+//  函数重载,多个同名函数,根据参数数量的不同或类型不同或返回值不同,
+function getName( a:{name:string} ):string;
+function getName( a:string ):object;
+function getName( a:any ):any{
+  if( typeof a === 'object' ){
+    return a.name;
+  }else{
+    return { name: a }
+  }
+} 
+
 </script>
 
 <style lang='stylus' scoped>
