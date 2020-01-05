@@ -43,3 +43,7 @@ export default class Hello extends Vue{
     // }
 }
 ```
+
+## 装饰器模式
+
+把内容二次封装,比如说给一个类,他就返回给你一个函数,给一个cpu,返回一个手机等等
