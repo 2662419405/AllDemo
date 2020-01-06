@@ -65,3 +65,16 @@ react 16.3版本出现了两个新的生命周期函数，并将逐渐废弃comp
 
 ![新版本生命周期](https://cdn.jsdelivr.net/gh/2662419405/imgPlus/1370028-20190727163040411-1031872559.png)
 
+> 更新新特性的原因: 在React16版本之后推出了Fiber,因为要异步执行 async rendering, 在render之前的函数都可能被执行了多次,之前的函数有
+
+1. componentWillMount
+2. componentWillUpdate
+3. componentWillReceiveProps
+4. shouldComponentUpdate
+
+新增的生命周期
+
+<!-- 需要配合static.xxx来调用 -->
+1. getSnapshotBeforeUpdate(prevProps, prevState)
+2. componentDidCatch  
+<!-- 补货异常错误处理 -->
