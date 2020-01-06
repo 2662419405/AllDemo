@@ -12,6 +12,7 @@ describe('sunhang',()=>{
         // 断言
         expect(add(1,3)).toBe(4)
         expect(add(-2,3)).toBe(1)
+        expect(add(1,4)).toBe(3)
     })
 })
 
