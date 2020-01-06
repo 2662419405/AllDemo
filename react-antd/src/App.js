@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   Button
-} from 'antd/dist/antd';
-import "antd/dist/antd.css"
+} from 'antd';
 
 function App() {
   return (
