@@ -78,3 +78,5 @@ react 16.3版本出现了两个新的生命周期函数，并将逐渐废弃comp
 1. getSnapshotBeforeUpdate(prevProps, prevState)
 2. componentDidCatch  
 <!-- 补货异常错误处理 -->
+
+## React组件化

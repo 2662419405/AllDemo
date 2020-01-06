@@ -2,6 +2,7 @@ import React from 'react';
 import { Welcome, Welcome1 } from './components/Hello';
 import Clock from './components/clock';
 import CardShop from './components/CardShop';
+import AntdTest from './antd/AntdTest'
 
 class App extends React.Component {
 
@@ -17,6 +18,7 @@ class App extends React.Component {
         <Welcome1 name="canmeng"></Welcome1>
         <Clock />
         <CardShop title="购物车"/>
+        <AntdTest />
       </div>
     );
   }
