@@ -42,3 +42,11 @@ module.exports = override(
 * 安装react-router
 * 安装react-redux
 * 安装redux
+
+路由对象的三个参数
+
+1. history 用来前几和后退或者增加路由选项
+2. match 用来获取参数列表
+3. location 当前url信息
+
+react-router路由守卫
