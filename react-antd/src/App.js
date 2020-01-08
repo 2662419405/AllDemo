@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 
 class App extends PureComponent {
   render(){
-    const {title} = this.props;
+    const {title,handlerEventClick} = this.props;
     return (
       <div className="App">
         123
-        <Button type="primary">按钮132</Button>
+        <Button type="primary"
+          onClick={ ()=>{ handlerEventClick(1) } }
+        >按钮132</Button>
         <Link to="/demo">去子组件</Link>
         { title }
       </div>
@@ -25,7 +27,9 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch) =>{
   return {
-
+    handlerEventClick(data){
+      console.log(data)
+    }
   }
 }
 
