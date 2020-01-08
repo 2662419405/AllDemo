@@ -1,17 +1,32 @@
-import React from 'react';
-import {
-  Button
-} from 'antd';
+import React, { PureComponent } from "react";
+import { Button } from "antd";
+import { connect } from 'react-redux'
+import { Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      123
-      <Button>
-        按钮
-      </Button>
-    </div>
-  );
+class App extends PureComponent {
+  render(){
+    const {title} = this.props;
+    return (
+      <div className="App">
+        123
+        <Button type="primary">按钮132</Button>
+        <Link to="/demo">去子组件</Link>
+        { title }
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state)=>{
+  return {
+    title: state.Header.title
+  }
+}
+
+const mapDispatchToProps = (dispatch) =>{
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

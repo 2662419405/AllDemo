@@ -38,3 +38,7 @@ module.exports = override(
   })
 );
 ```
+
+* 安装react-router
+* 安装react-redux
+* 安装redux
