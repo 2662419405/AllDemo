@@ -11,3 +11,11 @@ export const changeValue = ()=>{
         },1000)
     }
 }
+
+export const sagaData = (data)=>{
+    var arr = {
+        type: 'saga',
+        value: `这是saga传递的数据${data}`
+    }
+    return arr;
+}
