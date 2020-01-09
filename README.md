@@ -22,4 +22,4 @@
 12. vue 单元测试 -> [vue-demo](/ts-demo)
 13. react 入门 & react购物车 -> [react-first](/react-first)
 14. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
-15. 
+15. generator -> [genertor](/genertor)
