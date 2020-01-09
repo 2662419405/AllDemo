@@ -1,15 +1,16 @@
 {
-  "name": "umi1",
+  "name": "umi123",
   "version": "1.0.0",
-  "description": "",
+  "description": "* 基础路由 src下面的js文件",
   "main": "index.js",
+  "dependencies": {
+    "umi": "^2.12.9"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "umi": "^2.12.9"
-  }
+  "license": "ISC"
 }
