@@ -13,26 +13,16 @@ const Router = DefaultRouter;
 
 const routes = [
   {
-    path: '/food/:id',
-    exact: true,
-    component: require('../food/$id.js').default,
-  },
-  {
     path: '/',
+    component: require('../index').default,
     exact: true,
-    component: require('../index.js').default,
-  },
-  {
-    path: '/users/:about',
-    exact: true,
-    component: require('../users/$about.js').default,
   },
   {
     component: () =>
       React.createElement(
         require('D:/AllDemo/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
-        { pagesPath: 'src/pages', hasRoutesInConfig: false },
+        { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),
   },
 ];

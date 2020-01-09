@@ -9,6 +9,8 @@ export default function() {
       <Link to="/users/1231313">去动态路由users组件</Link>
       <br />
       <Link to="/food/id">去动态路由food组件</Link>
+      <br />
+      <Link to="/header/food">去Header嵌套路由</Link>
     </div>
   );
 }
