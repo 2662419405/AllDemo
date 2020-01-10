@@ -23,5 +23,4 @@
 13. react 入门 & react购物车 -> [react-first](/react-first)
 14. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
 15. generator -> [genertor](/genertor)
-16. umi & dva 配合使用 -> [umi-dva](/umi-dva)
-17. react项目实战 -> [项目](/react项目)
+16. umi & dva 配合使用 -> [项目](/react项目)
