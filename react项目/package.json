@@ -1,0 +1,17 @@
+{
+  "name": "umi-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^3.13.0",
+    "axios": "^0.18.0",
+    "umi-plugin-react": "^1.4.2"
+  }
+}
