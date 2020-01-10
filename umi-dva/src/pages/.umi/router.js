@@ -8,8 +8,9 @@ import {
 import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/lib/renderRoutes';
 import history from '@@/history';
+import { routerRedux } from 'dva';
 
-const Router = DefaultRouter;
+const Router = routerRedux.ConnectedRouter;
 
 const routes = [
   {
@@ -18,9 +19,57 @@ const routes = [
     exact: true,
   },
   {
+    path: '/login',
+    component: require('../login').default,
+    exact: true,
+  },
+  {
+    path: '/goods',
+    component: require('../goods').default,
+    exact: true,
+  },
+  {
+    path: '/about',
+    component: require('../about').default,
+    Routes: [require('../../../routes/PrivateRoute.js').default],
+    exact: true,
+  },
+  {
+    path: '/users',
+    component: require('../users/_layout').default,
+    routes: [
+      {
+        path: '/users/',
+        component: require('../users/index').default,
+        exact: true,
+      },
+      {
+        path: '/users/:id',
+        component: require('../users/$id').default,
+        exact: true,
+      },
+      {
+        component: require('../NotFound').default,
+        exact: true,
+      },
+      {
+        component: () =>
+          React.createElement(
+            require('D:/AllDemo/umi-dva/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+              .default,
+            { pagesPath: 'src/pages', hasRoutesInConfig: true },
+          ),
+      },
+    ],
+  },
+  {
+    component: require('../NotFound').default,
+    exact: true,
+  },
+  {
     component: () =>
       React.createElement(
-        require('D:/AllDemo/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+        require('D:/AllDemo/umi-dva/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
         { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),
