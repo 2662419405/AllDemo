@@ -1,4 +1,8 @@
-
-.normal {
-  background: #EC79F2;
+.loginForm {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+}
+.logo {
+  margin-bottom: 30px;
 }

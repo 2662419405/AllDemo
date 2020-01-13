@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ant-design-pro": "^2.2.1",
     "antd": "^3.13.0",
     "axios": "^0.18.0",
     "umi-plugin-react": "^1.4.2"

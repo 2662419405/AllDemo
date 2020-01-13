@@ -14,4 +14,6 @@ app.use(createLoading());
   app.use(plugin);
 });
 
+app.model({ namespace: 'cart', ...(require('D:/AllDemo/react项目/src/models/cart.js').default) });
+app.model({ namespace: 'user', ...(require('D:/AllDemo/react项目/src/models/user.js').default) });
 app.model({ namespace: 'goods', ...(require('D:/AllDemo/react项目/src/pages/goods/models/goods.js').default) });

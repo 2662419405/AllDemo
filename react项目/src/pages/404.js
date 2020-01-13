@@ -1,8 +1,6 @@
-
+import {Exception} from 'ant-design-pro'
 export default function() {
   return (
-    <div>
-      <h1>页面不存在</h1>
-    </div>
+    <Exception type="404" backText="返回首页"></Exception>
   );
 }

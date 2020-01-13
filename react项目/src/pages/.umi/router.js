@@ -13,38 +13,51 @@ const Router = require('dva/router').routerRedux.ConnectedRouter;
 
 const routes = [
   {
-    path: '/',
-    component: require('../index').default,
-    exact: true,
-  },
-  {
     path: '/login',
     component: require('../login').default,
     exact: true,
   },
   {
-    path: '/goods',
-    component: require('../goods/index').default,
-    exact: true,
-  },
-  {
-    path: '/about',
-    component: require('../about').default,
-    Routes: [require('../../../routes/PrivateRoute.js').default],
-    exact: true,
-  },
-  {
-    path: '/users',
-    component: require('../users/_layout').default,
+    path: '/',
+    component: require('../../layouts').default,
     routes: [
       {
-        path: '/users/',
-        component: require('../users/index').default,
+        path: '/',
+        component: require('../goods/index').default,
         exact: true,
       },
       {
-        path: '/users/:id',
-        component: require('../users/$id').default,
+        path: '/about',
+        component: require('../about').default,
+        Routes: [require('../../../routes/PrivateRoute.js').default],
+        exact: true,
+      },
+      {
+        path: '/users',
+        component: require('../users/_layout').default,
+        routes: [
+          {
+            path: '/users/',
+            component: require('../users/index').default,
+            exact: true,
+          },
+          {
+            path: '/users/:id',
+            component: require('../users/$id').default,
+            exact: true,
+          },
+          {
+            component: () =>
+              React.createElement(
+                require('D:/study/nodejs/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                  .default,
+                { pagesPath: 'src/pages', hasRoutesInConfig: true },
+              ),
+          },
+        ],
+      },
+      {
+        component: require('../404').default,
         exact: true,
       },
       {
@@ -56,10 +69,6 @@ const routes = [
           ),
       },
     ],
-  },
-  {
-    component: require('../404').default,
-    exact: true,
   },
   {
     component: () =>
