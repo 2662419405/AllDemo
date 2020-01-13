@@ -49,3 +49,9 @@ export default {
     }
 }
 ```
+
+* 设置骨架屏
+
+1. 创建一个占位的数组 `arr:new Array(8).fill({})`
+2. 在循环遍历列表的时候设置一个三元运算符,如果没有数据就使用antd库提供的骨架屏 {this.state.data?<div>数据</div>:<Skeleton active={true} />}
+3. 可以给骨架屏设置一个动画`actice={true}`
