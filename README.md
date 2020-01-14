@@ -24,3 +24,4 @@
 14. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
 15. generator -> [genertor](/genertor)
 16. antd-pro & 骨架屏 & umi项目实战 -> [项目](/react项目)
+17. 手写React核心Api & 探究setState & 探究diff算法 -> [react原理](/react原理)
