@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <title>瓜果超市</title>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="fruit in fruits" :key="fruit._id">
+        {{ fruit.name }} - {{ fruit.price }}
+      </li>
+    </ul>
+    <el-pagination layout="prev, pager, next" @current-change="currentChange" :total="total"></el-pagination>
+  </div>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        page: 1,
+        total: 0,
+        fruits: []
+      },
+      created() {
+        this.getData();
+      },
+      methods: {
+        currentChange(page) {
+          this.page = page;
+          this.getData();
+        },
+        getData() {
+          axios
+            .get(`/api/list?page=${this.page}`)
+            .then(res => res.data)
+            .then(({
+              data
+            }) => {
+              this.fruits = data.fruits;
+              this.total = data.pagination.total;
+            });
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
