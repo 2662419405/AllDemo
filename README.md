@@ -29,3 +29,4 @@
 19. node持久化mysql -> [node-mysql](/node-mysql)
 20. node持久化mongodb -> [mongodb](/node-mongo)
 21. koa实战 -> [koa实战](/koa实战)
+22. koa鉴权 -> [koa鉴权](/koa鉴权)

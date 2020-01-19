@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div>
+        <input v-model="username" />
+        <input v-model="password" />
+      </div>
+      <div>
+        <button @click="login">Login</button>
+        <button @click="logout">Logout</button>
+        <button @click="getUser">GetUser</button>
+      </div>
+      <div>
+        <button @click="logs=[]">Clear Log</button>
+      </div>
+      <!-- 日志 -->
+      <ul>
+        <li v-for="(log,idx) in logs" :key="idx">
+          {{ log }}
+        </li>
+      </ul>
+    </div>
+    <script>
+      // 这行代码很关键，请求时携带cookie
+      axios.defaults.withCredentials = true;
+      axios.interceptors.response.use(response => {
+        app.logs.push(JSON.stringify(response.data));
+        return response;
+      });
+      var app = new Vue({
+        el: "#app",
+        data: {
+          username: "test",
+          password: "test",
+          logs: []
+        },
+        methods: {
+          login: async function() {
+            await axios.post("/users/login", {
+              username: this.username,
+              password: this.password
+            });
+          },
+          logout: async function() {
+            await axios.post("/users/logout");
+          },
+          getUser: async function() {
+            await axios.get("/users/getUser");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

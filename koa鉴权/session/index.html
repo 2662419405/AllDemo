@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <input v-model="username">
+      <input v-model="password">
+    </div>
+    <div>
+      <button v-on:click="login">Login</button>
+      <button v-on:click="logout">Logout</button>
+      <button v-on:click="getUser">GetUser</button>
+    </div>
+    <div>
+      <button onclick="document.getElementById('log').innerHTML = ''">Clear Log</button>
+    </div>
+  </div>
+  <h6 id="log"></h6>
+  </div>
+  <script>
+    // axios.defaults.baseURL = 'http://localhost:3000'
+    axios.defaults.withCredentials = true
+    axios.interceptors.response.use(
+      response => {
+        document.getElementById('log').append(JSON.stringify(response.data))
+        return response;
+      }
+    );
+    var app = new Vue({
+      el: '#app',
+      data: {
+        username: 'test',
+        password: 'test'
+      },
+      methods: {
+        async login() {
+          await axios.post('/login', {
+            username: this.username,
+            password: this.password
+          })
+        },
+        async logout() {
+          await axios.post('/logout')
+        },
+        async getUser() {
+          await axios.get('/getUser')
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
