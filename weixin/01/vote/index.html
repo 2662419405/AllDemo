@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.js"></script>
+  <script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css" />
+  <link rel="stylesheet" href="vote.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div id="chart" style="width:100%;height:50%;"></div>
+    <cube-button @click="reset">重置</cube-button>
+    <div class="view-wrapper">
+      <div class="list" v-for="item in list.slice(0,5)">
+        <div class="item">
+          <div class="avatar"></div>
+          <div class="bubble">
+            <p>{{ item.Content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        list: []
+      },
+      watch: {
+        list: {
+          handler(newName) {
+            this.renderChart();
+          },
+          immediate: true,
+          deep: true
+        }
+      },
+      methods: {
+        initChart() {
+          const option = {
+            series: [{
+              type: "pie",
+              selectedMode: "single",
+              radius: [0, "70%"],
+              label: {
+                normal: {
+                  position: "inner"
+                }
+              },
+              labelLine: {
+                normal: {
+                  show: false
+                }
+              }
+            //   data:[
+            //       {name:'1',value:10},{name:'2',value:20}
+            //   ]
+            }]
+          };
+          this.chart = echarts.init(document.getElementById("chart"));
+          this.chart.setOption(option);
+        },
+        // 刷新图表
+        renderChart(newName) {
+          const data = ["1", "2"]
+            .map(key => ({
+              name: key,
+              value: this.list.filter(v => v.Content === key).length
+            }))
+            .filter(v => v.value !== 0);
+          const option = {
+            series: [{
+              data
+            }]
+          };
+          this.chart ? this.chart.setOption(option) : "";
+        },
+        // 重置
+        reset() {
+          this.list = [];
+        }
+      },
+      mounted() {
+        this.initChart();
+        // debug
+        // setInterval(() => {
+        //   this.list.unshift({
+        //     FromUserName: Math.random() + '',
+        //     Content: Math.random() > 0.1 ? '1' : '2'
+        //   })
+        // }, 100)
+            const socket = io()
+            socket.on('chat',msg => {
+                console.log('chart ...',msg)
+                this.list.unshift(msg)
+            })
+      }
+    });
+  </script>
+</body>
+</html>

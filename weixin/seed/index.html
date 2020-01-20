@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+    <script src="https://cdn.bootcss.com/qs/6.6.0/qs.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+    <style>
+        /* .cube-btn {
+            margin: 10px 0;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <cube-input v-model="value"></cube-input>
+        <cube-button @click='click'>Click</cube-button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                value: 'input'
+            },
+
+            methods: {
+                click: function () {
+                    console.log('click')
+                }
+            },
+            mounted: function () {
+
+            },
+        });
+    </script>
+</body>
+
+</html>
