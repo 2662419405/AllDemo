@@ -7,8 +7,6 @@
     "doc": "doc"
   },
   "scripts": {
-    "sunny": "./bin/sunny clientid 62d16df91a118fd3",
-    "ngrok": "./bin/ngrok http 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
