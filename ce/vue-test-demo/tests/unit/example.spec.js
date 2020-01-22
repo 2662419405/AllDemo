@@ -18,7 +18,7 @@ describe('测试vue函数',()=>{
   it('模拟点击按钮',()=>{
     const wrapper = mount(Sun);
     wrapper.find('button').trigger('click')
-    expect(wrapper.vm.title).toBe("2")
+    expect(wrapper.vm.title).toBe(2)
   })
 })
 

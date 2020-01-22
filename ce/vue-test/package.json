@@ -54,7 +54,9 @@
   ],
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["src/**/*.{js,vue}"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}"
+    ],
     "moduleFileExtensions": [
       "js",
       "jsx",
