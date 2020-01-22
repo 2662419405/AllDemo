@@ -34,3 +34,4 @@
 24. 微信-> [weixin](/weixin)
 25. 微信oauth -> [weixin2](/weixin2)
 26. 由于RN的文件太大太多了,暂时就不放了
+27. 自动化测试 -> [ce](/ce)
