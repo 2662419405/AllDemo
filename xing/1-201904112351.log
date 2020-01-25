@@ -1,0 +1,65 @@
+ndex onShow have been invoked
+2019-4-11 18:39:1 [log] page pages/index/index onReady have been invoked
+2019-4-11 18:39:1 [log] wx.hideLoading api invoke
+2019-4-11 18:39:29 [log] page pages/index/index onHide have been invoked
+2019-4-11 18:39:29 [log] App onHide have been invoked
+2019-4-11 18:39:44 [log] wx.getStorageSync api invoke
+2019-4-11 18:39:44 [log] wx.getStorageSync return
+2019-4-11 18:39:44 [log] wx.setStorageSync api invoke
+2019-4-11 18:39:44 [log] wx.setStorageSync return
+2019-4-11 18:39:44 [log] wx.setTabBarBadge api invoke
+2019-4-11 18:39:44 [log] wx.getStorageSync api invoke
+2019-4-11 18:39:44 [log] wx.getStorageSync return
+2019-4-11 18:39:44 [log] App onLaunch have been invoked
+2019-4-11 18:39:44 [log] App onSh2019-4-11 18:34:41 [log] wx.getStorageSync api invoke
+2019-4-11 18:34:41 [log] wx.getStorageSync return
+2019-4-11 18:34:41 [log] wx.setStorageSync api invoke
+2019-4-11 18:34:41 [log] wx.setStorageSync return
+2019-4-11 18:34:41 [log] wx.setTabBarBadge api invoke
+2019-4-11 18:34:41 [log] wx.getStorageSync api invoke
+2019-4-11 18:34:41 [log] wx.getStorageSync return
+2019-4-11 18:34:41 [log] App onLaunch have been invoked
+2019-4-11 18:34:41 [log] App onShow have been invoked
+2019-4-11 18:34:41 [log] wx.canIUse api invoke
+2019-4-11 18:34:41 [log] page pages/books/main onLoad have been invoked
+2019-4-11 18:34:41 [log] page pages/books/main onShow have been invoked
+2019-4-11 18:34:43 [log] page pages/books/main onHide have been invoked
+2019-4-11 18:34:43 [log] App onHide have been invoked
+2019-4-11 18:39:0 [log] wx.getStorageSync api invoke
+2019-4-11 18:39:0 [log] wx.getStorageSync return
+2019-4-11 18:39:0 [log] wx.setStorageSync api invoke
+2019-4-11 18:39:0 [log] wx.setStorageSync return
+2019-4-11 18:39:0 [log] wx.setTabBarBadge api invoke
+2019-4-11 18:39:0 [log] wx.getStorageSync api invoke
+2019-4-11 18:39:0 [log] wx.getStorageSync return
+2019-4-11 18:39:0 [log] App onLaunch have been invoked
+2019-4-11 18:39:0 [log] App onShow have been invoked
+2019-4-11 18:39:0 [log] wx.canIUse api invoke
+2019-4-11 18:39:0 [log] wx.showLoading api invoke
+2019-4-11 18:39:0 [log] page pages/index/index onLoad have been invoked
+2019-4-11 18:39:0 [log] page pages/index/iow have been invoked
+2019-4-11 18:39:44 [log] wx.canIUse api invoke
+2019-4-11 18:39:44 [log] wx.showLoading api invoke
+2019-4-11 18:39:44 [log] page pages/index/index onLoad have been invoked
+2019-4-11 18:39:44 [log] page pages/index/index onShow have been invoked
+2019-4-11 18:39:45 [log] page pages/index/index onReady have been invoked
+2019-4-11 18:39:45 [log] wx.hideLoading api invoke
+2019-4-11 18:40:13 [log] page pages/index/index onHide have been invoked
+2019-4-11 18:40:13 [log] App onHide have been invoked
+2019-4-11 23:51:6 [log] wx.getStorageSync api invoke
+2019-4-11 23:51:6 [log] wx.getStorageSync return
+2019-4-11 23:51:6 [log] wx.setStorageSync api invoke
+2019-4-11 23:51:6 [log] wx.setStorageSync return
+2019-4-11 23:51:6 [log] wx.setTabBarBadge api invoke
+2019-4-11 23:51:6 [log] wx.getStorageSync api invoke
+2019-4-11 23:51:6 [log] wx.getStorageSync return
+2019-4-11 23:51:6 [log] App onLaunch have been invoked
+2019-4-11 23:51:6 [log] App onShow have been invoked
+2019-4-11 23:51:6 [log] wx.canIUse api invoke
+2019-4-11 23:51:6 [log] wx.showLoading api invoke
+2019-4-11 23:51:6 [log] page pages/index/index onLoad have been invoked
+2019-4-11 23:51:6 [log] page pages/index/index onShow have been invoked
+2019-4-11 23:51:7 [log] page pages/index/index onReady have been invoked
+2019-4-11 23:51:8 [log] wx.hideLoading api invoke
+2019-4-11 23:51:12 [log] page pages/index/index onHide have been invoked
+2019-4-11 23:51:12 [log] App onHide have been invo
