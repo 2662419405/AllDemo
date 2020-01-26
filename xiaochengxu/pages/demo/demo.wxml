@@ -1,0 +1,9 @@
+<view>
+  快来学习{{name}}小程序
+</view>
+<input value="{{val}}" placeholder="请输入内容" bindinput="handlerChangeValue"></input>
+<button bindtap="handlerAddValue">确定</button>
+<view wx:for="{{arr}}">
+{{item}}
+</view>
+<camera></camera>
