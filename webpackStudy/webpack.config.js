@@ -38,6 +38,25 @@ module.exports = {
       {
         test: /\.scss$/, //loader是有执行顺序，从后往前
         use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.js/, //babel转化es6到es5
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            // presets: [
+            //   [
+            //     "@babel/preset-env",
+            //     {
+            //       useBuiltIns: "usage",
+            //       corejs: 2
+            //     }
+            //   ]
+            // ],
+            plugins: ["@babel/plugin-transform-runtime"]
+          }
+        }
       }
     ]
   },

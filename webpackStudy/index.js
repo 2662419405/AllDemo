@@ -26,3 +26,6 @@ function kkb() {
 }
 
 kkb();
+
+const sungithub = '123';
+console.log(sungithub)
