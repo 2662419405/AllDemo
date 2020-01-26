@@ -37,3 +37,4 @@
 27. 自动化测试 -> [ce](/ce)
 28. 性能优化 -> [xing](/xing)
 29. webpack学习 -> [webpackStudy](/webpackStudy)
+30. 微信小程序 -> [xiaochengxu](/xiaochengxu)
