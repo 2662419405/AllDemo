@@ -1,6 +1,11 @@
+<!--index.wxml-->
 <view class="container">
-  <view wx:for="{{books}}">
-    <image class="imagesCover" src="{{item.image}}"></image>
-    <view>{{item.title}}</view>
-  </view>
+
+<view class="info" wx:for="{{books}}">
+<image src="{{item.image}}"></image>
+{{item.title}}
+
+</view>
+
+
 </view>

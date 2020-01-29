@@ -1,8 +1,3 @@
-.imagesCover{
-  height: 100px;
-  width: 100px;
-}
-
-.container view{
-  height: 300px;
+.info{
+  height:300px;
 }
