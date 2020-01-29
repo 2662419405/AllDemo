@@ -1,1 +1,8 @@
-/* miniprogram/pages/index/index.wxss */
+.imagesCover{
+  height: 100px;
+  width: 100px;
+}
+
+.container view{
+  height: 300px;
+}

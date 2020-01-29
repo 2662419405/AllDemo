@@ -1,3 +1,4 @@
+const db = wx.cloud.database()
 // miniprogram/pages/index/index.js
 Page({
 
@@ -5,14 +6,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    books: [],
+    page: 0,
   },
-
+  onReachBottom(){
+    console.log('触发底部了')
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList(true)
+  },
+  getList(){
+    const PAGE = 3
+    const offest = this.data.page * PAGE
+    let ret = db.collection('doubanbooks').orderBy('create_time', 'desc')
+    if(this.data.page>1){
+      ret = ret.skip(offest)
+    }
+    ret = ret.limit(PAGE).get().then(res=>{
+      this.setData({
+        books: res.data
+      })
+    })
+    // db.collection('doubanbooks').orderBy('create_time', 'desc').get().then(res => {
+    //   this.setData({
+    //     books: res.data
+    //   })
+    // })
   },
 
   /**

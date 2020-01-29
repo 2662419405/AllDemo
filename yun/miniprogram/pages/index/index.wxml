@@ -1,1 +1,6 @@
-首页
+<view class="container">
+  <view wx:for="{{books}}">
+    <image class="imagesCover" src="{{item.image}}"></image>
+    <view>{{item.title}}</view>
+  </view>
+</view>
