@@ -5,9 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: wx.getStorageSync("userinfo") || {}
   },
-
+  userName(e){
+    let userInfo = e.detail.userInfo
+    // 调用云函数,获取用户的openid
+    wx.cloud.callFunction({
+      name: "login",
+      complete: res=>{
+        userInfo.openid = res.result.openid
+        this.setData({
+          userInfo
+        })
+        // 写入本地缓存
+        wx.setStorageSync('userinfo', userInfo)
+      }
+    })
+  },
+  // 添加图书
+  addBook(isbn){
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: "book",
+      data: {isbn},
+      success: res=>{
+        // 追加到数据库中
+        console.log(res)
+      }
+    })
+  },
+  // 扫二维码
+  ScanCode(){
+    wx.scanCode({
+      success:res=>{
+        // 可以获取到图书的isbn
+        // console.log(res)
+        this.addBook(res.result)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
