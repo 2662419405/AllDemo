@@ -1,3 +1,4 @@
+const db = wx.cloud.database()
 // miniprogram/pages/me/me.js
 Page({
 
@@ -30,7 +31,18 @@ Page({
       data: {isbn},
       success: res=>{
         // 追加到数据库中
-        console.log(res)
+        // console.log(res)
+        db.collection('doubanbooks').add({
+          data: res.result
+        }).then(result=>{
+          console.log(result)
+          if (result._id){
+            wx.showModal({
+              title: '添加成功',
+              content: `[${res.result.title}]添加成功`,
+            })
+          }
+        })
       }
     })
   },
