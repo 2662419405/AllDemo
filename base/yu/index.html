@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="/image/o_74911.jpg" alt />
+    <img src="/image/o_770659.jpg" alt />
+    <img src="/image/o_899029.jpg" alt />
+    <img src="/image/sh.jpg" alt />
+    <img src="/image/PChome.gif" alt />
+    <img src="/image/PCdetail.gif" alt />
+    <img src="/image/PC1.jpg" />
+    <img src="/image/PC2.jpg" />
+    <img src="/image/PC3.jpg" />
+</body>
+<script>
+    window.onload = function () {
+        let imgs = document.querySelectorAll("img");
+        let num = imgs.length;
+        let count = 0;
+        Array.from(imgs).forEach(item => {
+            let img = new Image();
+            img.onload = () => {
+                count++; // 当count = num 时代表加载完成
+            };
+            img.src = item.getAttribute("src");
+        });
+    }
+</script>
+
+</html>

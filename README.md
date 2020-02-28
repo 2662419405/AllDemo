@@ -8,6 +8,14 @@
 
 * 选择哪个Demo,都需要进入对应的目录下面安装 `yarn` or `npm i`
 
+## 基础篇
+
+1. 文字文本溢出解决方案 -> [文本溢出](/base/wen/index.html)
+2. 图片预加载 -> [预加载](/base/yu/index.html)  vue版本图片[预加载](/base/yu/index.vue)
+3. 手写一个new -> [new](/base/new/index.html)
+
+## 框架篇
+
 1. vue购物车 -> [进入购物车](/shop)
 2. element练习 -> [框架练习](/login-element)
 3. vuex和vueRouter -> [vuex和vue-router练习](/vuexrouter)
