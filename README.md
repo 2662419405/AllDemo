@@ -13,6 +13,7 @@
 1. 文字文本溢出解决方案 -> [文本溢出](/base/wen/index.html)
 2. 图片预加载 -> [预加载](/base/yu/index.html)  vue版本图片[预加载](/base/yu/index.vue)
 3. 手写一个new -> [new](/base/new/index.html)
+4. 文件上传Demo -> [文件](/base/file/README.md)
 
 ## 框架篇
 

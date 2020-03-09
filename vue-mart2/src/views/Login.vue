@@ -1,10 +1,15 @@
 <template>
   <div>
     <div class="logo">
-      <img src="https://img.kaikeba.com/logo-new.png" alt>
+      <img src="../../public/img/01.jpg" alt />
     </div>
     <!-- <cube-button>登录</cube-button> -->
-    <cube-form :model="model" :schema="schema" @submit.prevent="handleLogin" @validate="haneldValidate"></cube-form>
+    <cube-form
+      :model="model"
+      :schema="schema"
+      @submit.prevent="handleLogin"
+      @validate="haneldValidate"
+    ></cube-form>
   </div>
 </template>
 
@@ -25,7 +30,7 @@ export default {
             modelKey: "username",
             label: "用户名",
             props: {
-              placeholder: "请输入用户名"
+              placeholder: "账号123"
             },
             rules: {
               // 校验规则
@@ -39,7 +44,7 @@ export default {
             label: "密码",
             props: {
               type: "password",
-              placeholder: "请输入密码",
+              placeholder: "密码123",
               eye: {
                 open: true
               }
@@ -62,7 +67,7 @@ export default {
       // 组织表单默认提交行为
       // e.preventDefault();
       // 登录请求
-    //   this.login(this.model) // 使用mapActions
+      //   this.login(this.model) // 使用mapActions
       this.$store
         .dispatch("login", this.model)
         .then(code => {
@@ -90,4 +95,10 @@ export default {
 </script>
 
 <style scoped>
+.logo {
+  width: 100%;
+}
+.logo img {
+  width: 100%;
+}
 </style>

@@ -27,7 +27,7 @@ module.exports = {
           const { username, passwd } = req.query;
           console.log(username, passwd);
 
-          if (username == "kaikeba" && passwd == "123") {
+          if (username == "123" && passwd == "123") {
             res.json({ code: 1, token: "jilei" });
           } else {
             res.status(401).json({ code: 0, message: "用户名或者密码错误" });

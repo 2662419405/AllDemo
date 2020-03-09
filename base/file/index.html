@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>project</title>
+    <link href="https://cdn.bootcss.com/element-ui/2.13.0/theme-chalk/index.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/element-ui/2.13.0/index.js"></script>
+    <script src="/uploader.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div @drop.prevent="handleDrag" @dragover.prevent="()=>{}">
+            <button @click="() => uploader.chooseFile()">选择</button>
+            <button @click="() => uploader.upload()">上传</button>
+
+            <br /><br />
+
+            <el-table :data="fileList" :style="{ width: '100%', height: '80%' }" size="mini" border>
+                <el-table-column prop="fileName" label="名称"></el-table-column>
+
+                <el-table-column prop="fileName" label="进度">
+                    <template slot-scope="scope">
+                        <el-progress :percentage="scope.row.percent || 0"></el-progress>
+                    </template>
+                </el-table-column>
+
+                <el-table-column prop="status" label="状态"></el-table-column>
+
+                <el-table-column prop="fileName" label="操作">
+                    <template slot-scope="scope">
+                        <button v-if="scope.row.status === 'error'" @click="reUpload(scope.row)">重传</button>
+                    </template>
+                </el-table-column>
+            </el-table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                fileList: []
+            },
+
+            mounted() {
+                this.uploader = new Uploader({
+                        url: 'http://localhost:3000/upload',
+                        accept: '.jpeg,.png,.jpg,.bmg,.gif',
+                        multiple: true,
+                        autoUpload: true,
+                        data: {
+                            name: 'test'
+                        }
+                    }).on('change', files => this.fileList = files)
+                    .on('progress', this.handleProgress)
+                    .on('success', data => console.log(data.data))
+            },
+
+            methods: {
+                handleProgress(e, file) {
+                    const index = this.fileList.findIndex(item => item.uid === file.uid)
+                    this.$set(this.fileList[index], 'percent', e.percent.toFixed(2))
+                },
+
+                reUpload(file) {
+                    this.uploader.upload(file)
+                },
+
+                handleDrag(e) {
+                    this.uploader.loadFiles(e.dataTransfer.files)
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
