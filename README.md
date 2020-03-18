@@ -15,6 +15,7 @@
 3. 手写一个new -> [new](/base/new/index.html)
 4. 文件上传Demo -> [文件](/base/file/README.md)
 5. 手写一个深拷贝 -> [深拷贝](/base/shen/index.html)
+6. 模拟订阅发布模式(观察者) -> [订阅发布](/base/ding/index.html)
 
 ## 框架篇
 
