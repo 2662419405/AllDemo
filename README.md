@@ -14,6 +14,7 @@
 2. 图片预加载 -> [预加载](/base/yu/index.html)  vue版本图片[预加载](/base/yu/index.vue)
 3. 手写一个new -> [new](/base/new/index.html)
 4. 文件上传Demo -> [文件](/base/file/README.md)
+5. 手写一个深拷贝 -> [深拷贝](/base/shen/index.html)
 
 ## 框架篇
 
