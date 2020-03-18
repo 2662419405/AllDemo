@@ -1,0 +1,103 @@
+/* 基础样式布局 */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.big {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #000000;
+  padding: 10px;
+  display: flex;
+}
+
+.small {
+  height: 20px;
+  width: 20px;
+  margin: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* 1 */
+.zhuzhou {
+  justify-content: center;
+}
+/* 2 */
+.wei {
+  justify-content: flex-end;
+}
+/* 3 */
+.zhongjian {
+  align-items: center;
+}
+/* 4 */
+.quanbu {
+  align-items: center;
+  justify-content: center;
+}
+/* 5 */
+.cewei {
+  justify-content: center;
+  align-items: flex-end;
+}
+/* 6 */
+.quanwei {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* 1 */
+.shuang {
+  justify-content: space-between;
+}
+/* 2 */
+.shuangce {
+  justify-content: space-between;
+  flex-direction: column;
+}
+/* 3 */
+.three {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 4 */
+.weibuCe {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+/* 1 */
+.yici {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: space-between;
+}
+/* 1 */
+.da {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.box {
+  justify-content: space-between;
+  display: flex;
+  flex-basis: 100%;
+}
+/* 6 */
+.biaSix {
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+/* 6.1 */
+.bianSix {
+  flex-wrap: wrap;
+  align-content: space-between;
+  flex-direction: column;
+}
