@@ -17,6 +17,16 @@
 5. 手写一个深拷贝 -> [深拷贝](/base/shen/index.html)
 6. 模拟订阅发布模式(观察者) -> [订阅发布](/base/ding/index.html)
 7. 玩转Flex布局 -> [Flex](/base/flex/index.html)
+8. 验证码大合集 -> [code](/base/code/index.html)
+
+## 实战篇
+
+| 名称             |                        源码                        |                              线上网址 |                       技术栈 |
+| ---------------- | :------------------------------------------------: | ------------------------------------: | ---------------------------: |
+| 美团PC端         |   [源码](https://github.com/2662419405/meituan)    |       [线上](http://mt.shtodream.cn/) |  原生React+antd+Koa+mongoose |
+| 美团移动端(推荐) |  [源码](https://github.com/2662419405/meituanAn)   |    [线上](http://react.shtodream.cn/) |    umi+dva+antd+Koa+mongoose |
+| 美团后台         | [源码](https://github.com/2662419405/meituanBack)  | [线上](http://vue.shtodream.cn/login) | vue+nuxt+elment+Koa+mongoose |
+| 饿了么多端开发   | [源码](https://github.com/2662419405/meituan-taro) |     [线上](http://taro.shtodream.cn/) |                 taro+taro-ui |
 
 ## 框架篇
 
