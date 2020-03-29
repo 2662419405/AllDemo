@@ -29,16 +29,17 @@ class App extends React.Component {
     // 此时可以访问状态和属性，可进行api调用等
     console.log("2.组件将要挂载");
   }
-  componentDidMount() {
+  componentDidMount() {// 80%  api调用 函数的dom挂载完成 所以调用api用数据去驱动视图修改
     // 组件已挂载，可进行状态更新操作
     console.log("3.组件已挂载");
   }
   componentWillReceiveProps() {
-    // 父组件传递的属性有变化，做相应响应
+    // 父组件传递的属性有变化，做相应响应 props发生了改变会调用
     console.log("4.将要接收属性传递");
   }
   shouldComponentUpdate() {
     // 组件是否需要更新，需要返回布尔值结果，优化点
+    // 如果你要进行性能优化 你会在哪个生命周期里面完成
     console.log("5.组件是否需要更新？");
     return true;
   }
