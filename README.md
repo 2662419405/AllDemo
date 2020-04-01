@@ -30,7 +30,9 @@
 
 ## 框架篇
 
-1. vue购物车 -> [进入购物车](/shop)
+**vue阶段**
+
+1. vue购物车 -> [进入购物车](/shop)  
 2. element练习 -> [框架练习](/login-element)
 3. vuex和vueRouter -> [vuex和vue-router练习](/vuexrouter)
 4. vue源码解析 -> [迷你Vue](/迷你vue)
@@ -42,23 +44,35 @@
 10. vue原生ssr ->  [ssr](/ssr)
 11. vue ts测试 -> [vue-ts](/vue-ts)
 12. vue 单元测试 -> [vue-demo](/ts-demo)
+
+**React阶段**
+
 13. react 入门 & react购物车 -> [react-first](/react-first) [react-sheng](/react-sheng)
 14. react 生命周期 (react 16 之前,react 16.3 和react 16.4 版本) [react-sheng](/react-sheng)
-15. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
-16. generator -> [genertor](/genertor)
-17. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
-18. 手写React核心Api & 探究setState & 探究diff算法 -> [react原理](/react原理)
+15. react高级 context,HOC高阶函数,具名插槽 [react-hide](/react-hide)
+16. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
+17. generator -> [genertor](/genertor)
+18. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
+19. 手写React核心Api & 探究setState & 探究diff算法 -> [react原理](/react原理)
+
+**node阶段**
+
 19. node基础课程 -> [node基础](/node基础)
 20. node持久化mysql -> [node-mysql](/node-mysql)
 21. node持久化mongodb -> [mongodb](/node-mongo)
 22. koa实战 -> [koa实战](/koa实战)
 23. koa鉴权 -> [koa鉴权](/koa鉴权)
+
+**前端综合**
+
 24. 前端安全 -> [前端安全](/前端安全)
-25. 微信-> [weixin](/weixin)
-26. 微信oauth -> [weixin2](/weixin2)
-27. 由于RN的文件太大太多了,暂时就不放了
-28. 自动化测试 -> [ce](/ce)
-29. 性能优化 -> [xing](/xing)
-30. webpack学习 -> [webpackStudy](/webpackStudy)
-31. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
-32. 微信云开发练习 -> [yun](/yun)
+25. 自动化测试 -> [ce](/ce)
+26. 性能优化 -> [xing](/xing)
+
+**微信**
+
+27. 微信-> [weixin](/weixin)
+28. 微信oauth -> [weixin2](/weixin2)
+29. webpack学习 -> [webpackStudy](/webpackStudy)
+30. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
+31. 微信云开发练习 -> [yun](/yun)
