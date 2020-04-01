@@ -7,8 +7,6 @@ export default class App extends Component {
       <div>
         <Link to="/">react16生命周期</Link>
         <br />
-        <Link to="/sheng-two">react16.3生命周期</Link>
-        <br />
         <Link to="/sheng-three">react16.4生命周期</Link>
         <br />
         {this.props.children}

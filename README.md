@@ -43,7 +43,7 @@
 11. vue ts测试 -> [vue-ts](/vue-ts)
 12. vue 单元测试 -> [vue-demo](/ts-demo)
 13. react 入门 & react购物车 -> [react-first](/react-first) [react-sheng](/react-sheng)
-14. react 生命周期 (react 16 之前,react 16.3 和react 16.4 版本)
+14. react 生命周期 (react 16 之前,react 16.3 和react 16.4 版本) [react-sheng](/react-sheng)
 15. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
 16. generator -> [genertor](/genertor)
 17. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
