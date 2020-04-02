@@ -1,0 +1,44 @@
+{
+  "name": "ali",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "antd": "^4.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^0.9.1",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "react": "^16.13.1",
+    "react-app-rewired": "^2.0.2-next.0",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "tslib": "^1.11.1"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
