@@ -68,11 +68,12 @@
 25. 前端安全 -> [前端安全](/前端安全)
 26. 自动化测试 -> [ce](/ce)
 27. 性能优化 -> [xing](/xing)
+28. TypeScript -> [ts](ts)
 
 **微信**
 
-28. 微信-> [weixin](/weixin)
-29. 微信oauth -> [weixin2](/weixin2)
-30. webpack学习 -> [webpackStudy](/webpackStudy)
-31. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
-32. 微信云开发练习 -> [yun](/yun)
+29. 微信-> [weixin](/weixin)
+30. 微信oauth -> [weixin2](/weixin2)
+31. webpack学习 -> [webpackStudy](/webpackStudy)
+32. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
+33. 微信云开发练习 -> [yun](/yun)
