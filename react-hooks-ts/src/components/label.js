@@ -1,23 +1,25 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useRef, useEffect } from "react";
 import { Tag, Input, message } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
-const Label = props => {
+const Label = (props) => {
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [indexInput, setIndexInput] = useState(-1);
   const [errorInput, setErrorInput] = useState(false);
+  const inputRef = useRef(null);
+  const inputRefs = useRef(null);
   let { item } = props;
 
   /**
    *
    * @param {event} e 事件对象编辑
    */
-  let handleInputChange = e => {
+  let handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
-  let handleClose = removedTag => {};
+  let handleClose = (removedTag) => {};
 
   /**
    * 错误校验
@@ -34,7 +36,7 @@ const Label = props => {
    * 输入完成之后的 校验 + 传递数据给父组件 + 本组件数据初始化
    * @param {any} index 告诉父组件属于编辑,还是新添加内容
    */
-  let handleInputConfirm = index => {
+  let handleInputConfirm = (index) => {
     if (errorInput) {
       message.error("请输入正确的键值对");
       return false;
@@ -69,11 +71,21 @@ const Label = props => {
     setInputValue(item);
   };
 
+  useEffect(() => {
+    if (inputRef && inputRef.current) {
+      inputRef.current.focus();
+    }
+    if (inputRefs && inputRefs.current) {
+      inputRefs.current.focus();
+    }
+  });
+
   return (
     <Fragment>
       {item.map((item, index) => {
         return indexInput === index ? (
           <Input
+            ref={inputRef}
             type="text"
             size="small"
             style={{ width: 200 }}
@@ -98,15 +110,14 @@ const Label = props => {
       })}
       {inputVisible && (
         <Input
+          ref={inputRefs}
           type="text"
           size="small"
           style={{ width: 200 }}
           value={inputValue}
           onChange={handleInputChange}
-          onBlur={handleInputConfirm}
-          onPressEnter={handleInputConfirm}
-          placeholder="请输入key=value 回车确认"
           className={errorInput ? "cuowu" : null}
+          placeholder="请输入key=value 回车确认"
         />
       )}
       {!inputVisible && (
