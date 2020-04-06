@@ -115,6 +115,8 @@ const Label = (props) => {
           size="small"
           style={{ width: 200 }}
           value={inputValue}
+          onBlur={() => handleInputConfirm()}
+          onPressEnter={() => handleInputConfirm()}
           onChange={handleInputChange}
           className={errorInput ? "cuowu" : null}
           placeholder="请输入key=value 回车确认"
