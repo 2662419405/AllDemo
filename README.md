@@ -18,6 +18,7 @@
 6. 模拟订阅发布模式(观察者) -> [订阅发布](/base/ding/index.html)
 7. 玩转Flex布局 -> [Flex](/base/flex/index.html)
 8. 验证码大合集 -> [code](/base/code/index.html)
+9. 函数柯里化 -> [柯里化](/base/ke/index.js)
 
 ## 实战篇
 
@@ -69,11 +70,11 @@
 26. 自动化测试 -> [ce](/ce)
 27. 性能优化 -> [xing](/xing)
 28. TypeScript -> [ts](ts)
+29. webpack学习 -> [webpackStudy](/webpackStudy)
 
 **微信**
 
 29. 微信-> [weixin](/weixin)
 30. 微信oauth -> [weixin2](/weixin2)
-31. webpack学习 -> [webpackStudy](/webpackStudy)
-32. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
-33. 微信云开发练习 -> [yun](/yun)
+31. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
+32. 微信云开发练习 -> [yun](/yun)
