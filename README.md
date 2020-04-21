@@ -29,6 +29,12 @@
 | 美团后台         | [源码](https://github.com/2662419405/meituanBack)  | [线上](http://vue.shtodream.cn/login) | vue+nuxt+elment+Koa+mongoose |
 | 饿了么多端开发   | [源码](https://github.com/2662419405/meituan-taro) |     [线上](http://taro.shtodream.cn/) |                 taro+taro-ui |
 
+## TodoMVC系列
+
+* 🔥react-mvc ( TS + Hooks ) [MVC](/react-mvc)
+* 🐠vue-mvc
+* ✂️react-mvc ( 普通版 )
+
 ## 框架篇
 
 **vue阶段**
@@ -78,3 +84,27 @@
 30. 微信oauth -> [weixin2](/weixin2)
 31. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
 32. 微信云开发练习 -> [yun](/yun)
+
+## License
+
+MIT License
+
+Copyright (c) 2020 残梦
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
