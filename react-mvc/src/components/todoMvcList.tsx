@@ -1,5 +1,6 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import TodoMvcItem from "./todoMvcItem";
+import TodoMvcFooter from "./todoMvcFooter";
 import "./todoMvcList.scss";
 
 interface Iprops {}
@@ -13,8 +14,24 @@ export interface Items {
 type listTypes = Items[];
 
 const TodoMvcList: React.FC<Iprops> = () => {
-  let [list, setList] = useState<listTypes>([]);
+  let [list, setList] = useState<listTypes>(
+    window.localStorage.getItem("list")
+      ? [...JSON.parse(window.localStorage.getItem("list") as string)]
+      : []
+  );
   let [val, setVal] = useState<string>("");
+  let [selected, setSelected] = useState<string>("#/");
+  useEffect(() => {
+    setSelected(window.location.hash);
+  }, []);
+  let completedCount: number = 0;
+  list.filter((i) => {
+    return i.completed !== false && completedCount++;
+  });
+  /**
+   * 输入回车,添加数据,并且清空列表
+   * @param e 事件对象
+   */
   const postValData = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.keyCode !== 13 || val.length === 0) return false;
     let obj = {
@@ -22,9 +39,80 @@ const TodoMvcList: React.FC<Iprops> = () => {
       completed: false,
       id: new Date().getTime(),
     };
+    window.localStorage.setItem("list", JSON.stringify([...list, obj]));
     setList([...list, obj]);
     setVal("");
   };
+  /**
+   *
+   * @param index 删除的索引
+   */
+  const deleteSpliceArr = (index: number) => {
+    var newArr = list;
+    newArr.splice(index, 1);
+    window.localStorage.setItem("list", JSON.stringify([...newArr]));
+    setList([...newArr]);
+  };
+  /**
+   *
+   * @param index 改变的索引
+   * @param competed 改变的状态
+   */
+  const changeCompeted = (index: number, competed: boolean) => {
+    var newArr = list;
+    newArr[index].completed = competed;
+    window.localStorage.setItem("list", JSON.stringify([...newArr]));
+    setList([...newArr]);
+  };
+  /**
+   *
+   * @param index 改变的索引
+   * @param value 改变的值
+   */
+  const doubleEditValue = (index: number, value: string) => {
+    var newArr = list;
+    newArr[index].title = value;
+    window.localStorage.setItem("list", JSON.stringify([...newArr]));
+    setList([...newArr]);
+  };
+  /**
+   * 清除选择的元素
+   */
+  const deleteCompleted = () => {
+    const arr = list.filter((i) => {
+      return i.completed === false;
+    });
+    window.localStorage.setItem("list", JSON.stringify([...arr]));
+    setList([...arr]);
+  };
+  /**
+   * 全选 && 反选
+   */
+  const seletedAll = () => {
+    if (list.length - completedCount === 0) {
+      list.filter((i) => {
+        return (i.completed = false);
+      });
+      window.localStorage.setItem("list", JSON.stringify([...list]));
+      setList([...list]);
+    } else {
+      list.filter((i) => {
+        return (i.completed = true);
+      });
+      window.localStorage.setItem("list", JSON.stringify([...list]));
+      setList([...list]);
+    }
+  };
+  const newList = list.filter((v) => {
+    if (selected === "#/active") {
+      return v.completed === false;
+    }
+    if (selected === "#/completed") {
+      return v.completed === true;
+    } else {
+      return v;
+    }
+  });
   return (
     <div className="todoapp">
       <div className="header">
@@ -41,27 +129,35 @@ const TodoMvcList: React.FC<Iprops> = () => {
         <Fragment>
           <div className="main">
             <input id="box" className="toggle-all" type="checkbox" />
-            <label htmlFor="box"></label>
+            <label
+              htmlFor="box"
+              onClick={seletedAll}
+              className={completedCount === list.length ? "com-label" : ""}
+            ></label>
             <ul className="todo-list">
-              {list.map((v, i) => {
-                return <TodoMvcItem key={i} list={v} />;
+              {newList.map((v, i) => {
+                return (
+                  <TodoMvcItem
+                    deleteHandler={(index) => deleteSpliceArr(index)}
+                    doubleEditVal={(index, val) => doubleEditValue(index, val)}
+                    competed={(index, competed) =>
+                      changeCompeted(index, competed)
+                    }
+                    key={i}
+                    list={v}
+                    index={i}
+                  />
+                );
               })}
             </ul>
           </div>
-          <div className="footer">
-            <span className="todo-count">
-              <strong>0</strong>
-              <span> items left</span>
-            </span>
-            <ul className="filters">
-              <li className="selected">All</li>
-              <span></span>
-              <li>Active</li>
-              <span></span>
-              <li>Completed</li>
-              <span></span>
-            </ul>
-          </div>
+          <TodoMvcFooter
+            deleteCompleted={deleteCompleted}
+            setSeleted={(val) => setSelected(val)}
+            selected={selected}
+            list={list}
+            completedCount={completedCount}
+          />
         </Fragment>
       )}
     </div>

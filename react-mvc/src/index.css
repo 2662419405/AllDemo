@@ -38,4 +38,10 @@ button {
   appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  outline: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
 }
