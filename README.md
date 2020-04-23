@@ -32,8 +32,8 @@
 ## TodoMVC系列
 
 * 🔥 React.TodoMVC ( TS + Hooks ) [MVC](/react-mvc)
-* ✂️ Vue.TodoMVC
-* 🐠 React.TodoMVC ( 普通版 )
+* 🐠 Vue.TodoMVC ( 普通版 ) [MVC](vue-mvc)
+* ✂️ React.TodoMVC (普通版)
 
 ## 框架篇
 
