@@ -28,12 +28,13 @@
 | 美团移动端(推荐) |  [源码](https://github.com/2662419405/meituanAn)   |    [线上](http://react.shtodream.cn/) |    umi+dva+antd+Koa+mongoose |
 | 美团后台         | [源码](https://github.com/2662419405/meituanBack)  | [线上](http://vue.shtodream.cn/login) | vue+nuxt+elment+Koa+mongoose |
 | 饿了么多端开发   | [源码](https://github.com/2662419405/meituan-taro) |     [线上](http://taro.shtodream.cn/) |                 taro+taro-ui |
+| 饿了么微信小程序   | [源码](https://github.com/2662419405/meituanWx) |     暂无 |                 原生微信小程序 |
 
 ## TodoMVC系列
 
 * 🔥 React.TodoMVC ( TS + Hooks ) [MVC](/react-mvc)
 * 🐠 Vue.TodoMVC ( 普通版 ) [MVC](vue-mvc)
-* ✂️ React.TodoMVC (普通版)
+* ✂️ Vue.TodoMVC ( TS ) [MVC](vue-ts-mvc)
 
 ## 框架篇
 
