@@ -1,0 +1,25 @@
+import React from "react";
+import ShUseState from "./shUseState";
+import ShUserReducer from "./shUseReducer";
+import ShRef from "./shRef";
+import ShUseCall from "./shUseCall";
+import ShMemo from "./shMemo";
+
+function index() {
+  return (
+    <div>
+      <h3>测试state</h3>
+      <ShUseState />
+      <h3>测试reducer</h3>
+      <ShUserReducer />
+      <h3>测试Ref</h3>
+      <ShRef />
+      <h3>测试memo</h3>
+      <ShMemo />
+      <h3>测试Callback</h3>
+      <ShUseCall />
+    </div>
+  );
+}
+
+export default React.memo(index);
