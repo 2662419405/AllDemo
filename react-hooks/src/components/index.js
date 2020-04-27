@@ -4,6 +4,7 @@ import ShUserReducer from "./shUseReducer";
 import ShRef from "./shRef";
 import ShUseCall from "./shUseCall";
 import ShMemo from "./shMemo";
+import ShMy from "./shUseMy";
 
 function index() {
   return (
@@ -18,6 +19,8 @@ function index() {
       <ShMemo />
       <h3>测试Callback</h3>
       <ShUseCall />
+      <h3>测试自定义hooks</h3>
+      <ShMy />
     </div>
   );
 }
