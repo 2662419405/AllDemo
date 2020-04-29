@@ -29,6 +29,7 @@
 | 美团后台         | [源码](https://github.com/2662419405/meituanBack)  | [线上](http://vue.shtodream.cn/login) | vue+nuxt+elment+Koa+mongoose |
 | 饿了么多端开发   | [源码](https://github.com/2662419405/meituan-taro) |     [线上](http://taro.shtodream.cn/) |                 taro+taro-ui |
 | 饿了么微信小程序   | [源码](https://github.com/2662419405/meituanWx) |     暂无 |                 原生微信小程序 |
+| 后台管理系统 (力荐)   | [源码](https://github.com/2662419405/react_admin) |   [线上](http://hooks.shtodream.cn)  |   TS + Hooks + Redux   |
 
 ## TodoMVC系列
 
