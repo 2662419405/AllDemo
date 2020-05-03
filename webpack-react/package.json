@@ -1,0 +1,38 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --ode=production",
+    "dev": "npx webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpackbar": "^4.0.0"
+  }
+}
