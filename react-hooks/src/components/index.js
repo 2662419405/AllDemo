@@ -5,6 +5,7 @@ import ShRef from "./shRef";
 import ShUseCall from "./shUseCall";
 import ShMemo from "./shMemo";
 import ShMy from "./shUseMy";
+import ShContext from "./shContext";
 
 function index() {
   return (
@@ -21,6 +22,8 @@ function index() {
       <ShUseCall />
       <h3>测试自定义hooks</h3>
       <ShMy />
+      <h3>测试Context</h3>
+      <ShContext />
     </div>
   );
 }
