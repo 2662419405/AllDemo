@@ -28,6 +28,21 @@ module.exports = {
             },
           },
           "sass-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [
+                require("autoprefixer")({
+                  // browsers: [
+                  //   "last 2 version",
+                  //   ">1%",
+                  //   "ios 7",
+                  //   "last 3 ie version",
+                  // ],
+                }),
+              ],
+            },
+          },
         ],
       },
       // es6转码
@@ -72,7 +87,7 @@ module.exports = {
       filename: "css/[name].css",
     }),
     new CleanWebpackPlugin(),
-    new WebpackBar(),  //进度条
+    new WebpackBar(), //进度条
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
