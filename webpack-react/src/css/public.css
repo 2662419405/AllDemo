@@ -1,0 +1,7 @@
+div p{
+    border: 1px solid #f00;
+    border-radius: 10px;
+    background: #09f;
+    color:#fff;
+    display: flex;
+}
