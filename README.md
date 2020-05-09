@@ -19,17 +19,18 @@
 7. 玩转Flex布局 -> [Flex](/base/flex/index.html)
 8. 验证码大合集 -> [code](/base/code/index.html)
 9. 函数柯里化 -> [柯里化](/base/ke/index.js)
+10. 实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
 
 ## 实战篇
 
-| 名称             |                        源码                        |                              线上网址 |                       技术栈 |
-| ---------------- | :------------------------------------------------: | ------------------------------------: | ---------------------------: |
-| 美团PC端         |   [源码](https://github.com/2662419405/meituan)    |       [线上](http://mt.shtodream.cn/) |  原生React+antd+Koa+mongoose |
-| 美团移动端(推荐) |  [源码](https://github.com/2662419405/meituanAn)   |    [线上](http://react.shtodream.cn/) |    umi+dva+antd+Koa+mongoose |
-| 美团后台         | [源码](https://github.com/2662419405/meituanBack)  | [线上](http://vue.shtodream.cn/login) | vue+nuxt+elment+Koa+mongoose |
-| 饿了么多端开发   | [源码](https://github.com/2662419405/meituan-taro) |     [线上](http://taro.shtodream.cn/) |                 taro+taro-ui |
-| 饿了么微信小程序   | [源码](https://github.com/2662419405/meituanWx) |     暂无 |                 原生微信小程序 |
-| 后台管理系统 (力荐)   | [源码](https://github.com/2662419405/react_admin) |   [线上](http://hooks.shtodream.cn)  |   TS + Hooks + Redux   |
+| 名称                |                        源码                        |                              线上网址 |                       技术栈 |
+| ------------------- | :------------------------------------------------: | ------------------------------------: | ---------------------------: |
+| 美团PC端            |   [源码](https://github.com/2662419405/meituan)    |       [线上](http://mt.shtodream.cn/) |  原生React+antd+Koa+mongoose |
+| 美团移动端(推荐)    |  [源码](https://github.com/2662419405/meituanAn)   |    [线上](http://react.shtodream.cn/) |    umi+dva+antd+Koa+mongoose |
+| 美团后台            | [源码](https://github.com/2662419405/meituanBack)  | [线上](http://vue.shtodream.cn/login) | vue+nuxt+elment+Koa+mongoose |
+| 饿了么多端开发      | [源码](https://github.com/2662419405/meituan-taro) |     [线上](http://taro.shtodream.cn/) |                 taro+taro-ui |
+| 饿了么微信小程序    |  [源码](https://github.com/2662419405/meituanWx)   |                                  暂无 |               原生微信小程序 |
+| 后台管理系统 (力荐) | [源码](https://github.com/2662419405/react_admin)  |     [线上](http://hooks.shtodream.cn) |           TS + Hooks + Redux |
 
 ## TodoMVC系列
 
