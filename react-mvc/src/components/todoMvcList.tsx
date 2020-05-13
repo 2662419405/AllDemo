@@ -14,16 +14,23 @@ export interface Items {
 type listTypes = Items[];
 
 const TodoMvcList: React.FC<Iprops> = () => {
-  let [list, setList] = useState<listTypes>(
-    window.localStorage.getItem("list")
-      ? [...JSON.parse(window.localStorage.getItem("list") as string)]
-      : []
-  );
+  let [list, setList] = useState<listTypes>([]);
   let [val, setVal] = useState<string>("");
   let [selected, setSelected] = useState<string>("#/");
+
   useEffect(() => {
     setSelected(window.location.hash);
+    setList(
+      window.localStorage.getItem("list")
+        ? [...JSON.parse(window.localStorage.getItem("list") as string)]
+        : []
+    );
   }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("list", JSON.stringify([...list]));
+  }, [list]);
+
   let completedCount: number = 0;
   list.filter((i) => {
     return i.completed !== false && completedCount++;
@@ -39,7 +46,6 @@ const TodoMvcList: React.FC<Iprops> = () => {
       completed: false,
       id: new Date().getTime(),
     };
-    window.localStorage.setItem("list", JSON.stringify([...list, obj]));
     setList([...list, obj]);
     setVal("");
   };
@@ -50,7 +56,6 @@ const TodoMvcList: React.FC<Iprops> = () => {
   const deleteSpliceArr = (index: number) => {
     var newArr = list;
     newArr.splice(index, 1);
-    window.localStorage.setItem("list", JSON.stringify([...newArr]));
     setList([...newArr]);
   };
   /**
@@ -61,7 +66,6 @@ const TodoMvcList: React.FC<Iprops> = () => {
   const changeCompeted = (index: number, competed: boolean) => {
     var newArr = list;
     newArr[index].completed = competed;
-    window.localStorage.setItem("list", JSON.stringify([...newArr]));
     setList([...newArr]);
   };
   /**
@@ -72,7 +76,6 @@ const TodoMvcList: React.FC<Iprops> = () => {
   const doubleEditValue = (index: number, value: string) => {
     var newArr = list;
     newArr[index].title = value;
-    window.localStorage.setItem("list", JSON.stringify([...newArr]));
     setList([...newArr]);
   };
   /**
@@ -82,7 +85,6 @@ const TodoMvcList: React.FC<Iprops> = () => {
     const arr = list.filter((i) => {
       return i.completed === false;
     });
-    window.localStorage.setItem("list", JSON.stringify([...arr]));
     setList([...arr]);
   };
   /**
@@ -93,13 +95,11 @@ const TodoMvcList: React.FC<Iprops> = () => {
       list.filter((i) => {
         return (i.completed = false);
       });
-      window.localStorage.setItem("list", JSON.stringify([...list]));
       setList([...list]);
     } else {
       list.filter((i) => {
         return (i.completed = true);
       });
-      window.localStorage.setItem("list", JSON.stringify([...list]));
       setList([...list]);
     }
   };
