@@ -17,8 +17,7 @@
 5. 模拟订阅发布模式(观察者) -> [订阅发布](/base/ding/index.html)
 6. 玩转Flex布局 -> [Flex](/base/flex/index.html)
 7. 函数柯里化 -> [柯里化](/base/ke/index.js)
-8.  实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
-
+8. 实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
 
 ## 实战篇
 
