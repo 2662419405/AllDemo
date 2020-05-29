@@ -57,7 +57,7 @@
 
 12. react 入门 & react购物车 -> [react-first](/react-first) [react-sheng](/react-sheng)
 13. react 生命周期 (react 16 之前,react 16.3 和react 16.4 版本) [react-sheng](/react-sheng)
-14. react高级 context,HOC高阶函数,具名插槽 [react-hide](/react-hide)
+14. **react新特性** 高级 context,HOC高阶函数,具名插槽 [react-hide](/react-hide)
 15. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
 16. generator -> [genertor](/genertor)
 17. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
