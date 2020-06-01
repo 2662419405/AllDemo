@@ -18,7 +18,8 @@
 6. 玩转Flex布局 -> [Flex](/base/flex/index.html)
 7. 函数柯里化 -> [柯里化](/base/ke/index.js)
 8. 实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
-
+9. 图片上传操作七牛云 [图片上传](/base/file/README.md)
+ 
 ## 实战篇
 
 | 名称                |                        源码                        |                                                                  线上网址 |                       技术栈 |
