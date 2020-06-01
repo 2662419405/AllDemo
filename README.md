@@ -55,39 +55,39 @@
 
 **React阶段**
 
-12. react 入门 & react购物车 -> [react-first](/react-first) [react-sheng](/react-sheng)
-13. react 生命周期 (react 16 之前,react 16.3 和react 16.4 版本) [react-sheng](/react-sheng)
-14. **react新特性** 高级 context,HOC高阶函数,具名插槽 [react-hide](/react-hide)
-15. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
-16. generator -> [genertor](/genertor)
-17. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
-18. 手写React核心Api & 探究setState & 探究diff算法 -> [react原理](/react原理)
-19. react + ts + hooks + antd 实例 -> [react-hooks-ts](/react-hooks-ts)
-20. react-hooks 全部常用的hooks [react-hooks](/react-hooks)
+1. react 入门 & react购物车 -> [react-first](/react-first) [react-sheng](/react-sheng)
+2.  react 生命周期 (react 16 之前,react 16.3 和react 16.4 版本) [react-sheng](/react-sheng)
+3. **react新特性** 高级 context,HOC高阶函数,具名插槽 [react-hide](/react-hide)
+4. react组件化 & antd库的使用 & react-redux & react-thunk & react-router & redux-saga [react-antd](/react-antd)
+5. generator -> [genertor](/genertor)
+6. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
+7. 手写React核心Api & 探究setState & 探究diff算法 -> [react原理](/react原理)
+8. react + ts + hooks + antd 实例 -> [react-hooks-ts](/react-hooks-ts)
+. react-hooks 全部常用的hooks [react-hooks](/react-hooks)
 
 **node阶段**
 
-20. node基础课程 -> [node基础](/node基础)
-21. node持久化mysql -> [node-mysql](/node-mysql)
-22. node持久化mongodb -> [mongodb](/node-mongo)
-23. koa实战 -> [koa实战](/koa实战)
-24. koa鉴权 -> [koa鉴权](/koa鉴权)
+1.  node基础课程 -> [node基础](/node基础)
+2.  node持久化mysql -> [node-mysql](/node-mysql)
+3.  node持久化mongodb -> [mongodb](/node-mongo)
+4.  koa实战 -> [koa实战](/koa实战)
+5.  koa鉴权 -> [koa鉴权](/koa鉴权)
 
 **前端综合**
 
-25. 前端安全 -> [前端安全](/前端安全)
-26. 自动化测试 -> [ce](/ce)
-27. 性能优化 -> [xing](/xing)
-28. TypeScript -> [ts](ts)
-29. webpack学习 -> [webpackStudy](/webpackStudy)
-30. webpack搭建React开发环境 [webpack-react](/webpack-react)
+1. 前端安全 -> [前端安全](/前端安全)
+2. 自动化测试 -> [ce](/ce)
+3. 性能优化 -> [xing](/xing)
+4. TypeScript -> [ts](ts)
+5. webpack学习 -> [webpackStudy](/webpackStudy)
+6. webpack搭建React开发环境 [webpack-react](/webpack-react)
 
 **微信**
 
-31. 微信-> [weixin](/weixin)
-32. 微信oauth -> [weixin2](/weixin2)
-33. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
-34. 微信云开发练习 -> [yun](/yun)
+1. 微信-> [weixin](/weixin)
+2. 微信oauth -> [weixin2](/weixin2)
+3. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
+4. 微信云开发练习 -> [yun](/yun)
 
 ## License
 
