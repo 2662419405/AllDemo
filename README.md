@@ -19,6 +19,7 @@
 7. 函数柯里化 -> [柯里化](/base/ke/index.js)
 8. 实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
 9. 图片上传操作七牛云 [图片上传](/base/file/README.md)
+10. localStorage的过期时间处理 [localStorage过期](/base/localStorge/index.js)
  
 ## 实战篇
 
