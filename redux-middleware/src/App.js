@@ -1,22 +1,18 @@
 import React from 'react'
 import store from './store'
-// import { connect } from 'react-redux'
+import { connect } from './store/s-react-redux'
 
 class App extends React.Component {
-  componentDidMount() {
-    store.subscribe(() => {
-      this.forceUpdate()
-    })
-  }
   render() {
-    console.log(store.getState())
+    console.log(this.props)
     return (
       <div>
-        {store.getState().count}
         <button onClick={() => store.dispatch({ type: 'add' })}>+1</button>
       </div>
     )
   }
 }
 
-export default App
+export default connect(state => ({
+  state: state.count,
+}))(App)
