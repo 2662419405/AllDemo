@@ -66,7 +66,8 @@
 6. antd-pro & 骨架屏 & umi项目实战 -> [react项目](/react项目)
 7. 手写React核心Api & 探究setState & 探究diff算法 -> [react原理](/react原理)
 8. react + ts + hooks + antd 实例 -> [react-hooks-ts](/react-hooks-ts)
-. react-hooks 全部常用的hooks [react-hooks](/react-hooks)
+9. react-hooks 全部常用的hooks [react-hooks](/react-hooks)
+10. 手写redux,和常用中间件机制  [redux-middleware](/redux-middleware)
 
 **node阶段**
 
