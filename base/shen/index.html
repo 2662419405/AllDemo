@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var a = {
+        name: "muyiy",
+        book: {
+            title: "You Don't Know JS",
+            price: "45"
+        },
+        a1: undefined,
+        a2: null,
+        a3: 123
+    }
+    // hasOwnProperty表示是否有自己的属性。这个方法会查找一个对象是否有某个属性，但是不会去查找它的原型链。
+    function cloneDeep1(source) {
+        var target = {};
+        for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+                if (typeof source[key] === 'object') {
+                    target[key] = cloneDeep1(source[key]); // 注意这里
+                } else {
+                    target[key] = source[key];
+                }
+            }
+        }
+        return target;
+    }
+    console.log(a)
+    // 使用上面测试用例测试一下
+    var b = cloneDeep1(a);
+    a.name = "高级前端进阶";
+    a.book.price = "55";
+    console.log(b);
+</script>
+
+</html>

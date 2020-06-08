@@ -1,0 +1,6 @@
+apps:
+  - script : server.js
+    instances: 2
+    watch  : true
+    env    :
+      NODE_ENV: production

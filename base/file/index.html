@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/qiniu-js@2.2.0/dist/qiniu.min.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <el-upload class="avatar-uploader" action="" :show-file-list="false" :before-upload="beforeAvatarUpload">
+            <template v-if="imgUrl.length===0">
+                <el-button>
+                    <i class="el-icon-upload2"></i>
+                    只支持上传jpg,png等图片格式,小于2MB</el-button>
+            </template>
+            <template v-else>
+                <img class="avatar-img" :src="imgUrl" alt="图片" />
+            </template>
+        </el-upload>
+        <el-progress class="max-pro" :percentage="percentage" :status="uploadStatus"></el-progress>
+        <el-button type="primary" :loading="loading" @click="handleSubmit">提交</el-button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    loading: false,
+                    file: null,
+                    imgUrl: "",
+                    percentage: 0,
+                    uploadStatus: '',
+                };
+            },
+            methods: {
+                async beforeAvatarUpload(file) {
+                    const isPNG = file.type === "image/png";
+                    const isJPEG = file.type === "image/jpeg";
+                    const isJPG = file.type === "image/jpg";
+                    const isLt2M = file.size / 1024 / 1024 < 2;
+
+                    if (!isPNG && !isJPEG && !isJPG) {
+                        this.$message.error("上传头像图片只能是 jpg、png、jpeg 格式!");
+                        return false;
+                    }
+                    if (!isLt2M) {
+                        this.$message.error("上传头像图片大小不能超过 2MB!");
+                        return false;
+                    }
+                    this.file = file;
+                    this.imgUrl = await this.createObjectUrl(file)
+                    return false //取消默认提交的事件
+                },
+                uploadError(err, file, fileList) {
+                    this.$message({
+                        message: "上传出错，请重试！",
+                        type: "error",
+                        center: true
+                    });
+                },
+                createObjectUrl(file) {
+                    return new Promise((resolve, reject) => {
+                        const reader = new FileReader()
+                        reader.readAsDataURL(file)
+                        reader.onload = () => resolve(reader.result)
+                        reader.onerror = reject
+                    })
+                },
+                //提交数据到后台
+                async handleSubmit() {
+                    const token = await axios.get("http://localhost:3000/file").then(res => {
+                        return res.data
+                    })
+                    if (!this.file) {
+                        return this.$message.error("请选择要上传的文件")
+                    }
+                    const {
+                        file
+                    } = this
+                    const config = {
+                        region: qiniu.region.z2
+                    }
+                    const observer = qiniu.upload(file, new Date().getTime(), token, null, config)
+                    observer.subscribe(
+                        next.bind(this),
+                        error.bind(this),
+                        complete.bind(this)
+                    )
+                }
+
+            }
+        })
+
+        function next({
+            total
+        }) {
+            this.percentage = +total.percent.toFixed(1) // toNum
+        }
+
+        function error(err) {
+            this.uploadStatus = 'exception'
+            console.error(err)
+        }
+
+        function complete() {
+            this.uploadStatus = 'success'
+            this.file = null
+            this.$message.success("文件上传完成")
+        }
+    </script>
+</body>
+
+</html>

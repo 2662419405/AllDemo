@@ -1,0 +1,125 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.js"></script>
+  <script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <h4>课堂小测试</h4>
+      <div class="aside" ref="aside" v-if="testArr.length !== 0">
+        <p>{{testArr[indx].question}}</p>
+        <ul>
+          <li v-for="(item,index) in testArr[indx].answer" :key="index">
+            <input type="radio" name="option" :id="index" @change="change(index,item.optionscore)" :checked="item.isChecked" /><label
+              :for="index">{{item.optionname}}</label>
+          </li>
+        </ul>
+      </div>
+      <cube-button @click="prev">上一题</cube-button>
+      <cube-button @click="next">下一题</cube-button>
+    </div>
+  </div>
+  <script>
+    // axios.defaults.baseURL = 'http://localhost:3000'
+    axios.interceptors.request.use(
+      config => {
+        const token = window.localStorage.getItem('token')
+        if (token) {
+          // 判断是否存在token，如果存在的话，则每个http header都加上token
+          // Bearer是JWT的认证头部信息
+          config.headers.common['Authorization'] = 'Bearer ' + token
+        }
+        return config
+      },
+      err => {
+        return Promise.reject(err)
+      }
+    )
+
+    const app = new Vue({
+      el: "#app",
+      data: {
+        indx: 0,
+        testArr: [],
+        sum: 0
+      },
+      methods: {
+        prev() {
+          this.indx--;
+        },
+        next() {
+          this.indx++;
+        },
+        change(index, score) {
+          this.testArr[this.indx].answer[index].isChecked = true;
+          this.$refs.aside.className = "aside";
+          if (event.target.checked) {
+            if (this.indx < this.testArr.length) {
+              this.indx++;
+              this.sum += score;
+              // this.$refs.aside.className = "aside animated bounceInRight"
+            }
+            if (this.indx == this.testArr.length) {
+              this.$refs.aside.innerHTML = `您的测试成绩是：${this.sum}`;
+              this.indx = 0;
+            }
+          }
+          this.saveData()
+        },
+
+        async saveData() {
+          let res = await axios.post('/saveData', {
+            data: this.testArr
+          })
+        },
+
+        async getData() {
+          let res = await axios.get('/getData')
+          this.testArr = res.data
+        },
+
+        async getInitData() {
+          let res = await axios.get('/getInitData')
+
+          console.log('data', res.data)
+          this.testArr = res.data
+        },
+        async auth() {
+          window.location.href = '/getAuthorizeURL'
+        },
+      },
+      mounted() {
+        // this.getContents()
+
+        const token = getQueryString('token')
+        if (token) {
+          window.localStorage.setItem('token', token)
+          // 初始化数据
+          this.getData()
+        } else {
+          // 认证
+          this.auth()
+        }
+      }
+    });
+
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+  </script>
+</body>
+
+</html>

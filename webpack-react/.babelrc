@@ -1,0 +1,19 @@
+{
+    "presets": [
+        '@babel/preset-env',
+        '@babel/preset-react',    
+    ],
+    "plugins":[ ["@babel/plugin-proposal-decorators", {"legacy": true}],
+                [
+                    "@babel/plugin-transform-runtime",
+                    {
+                    "absoluteRuntime": false,
+                    "corejs": 2,
+                    "helpers": true,
+                    "regenerator": true,
+                    "useESModules": false
+                    }
+                ],
+                "@babel/plugin-syntax-dynamic-import"
+    ]
+}

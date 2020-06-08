@@ -1,0 +1,23 @@
+{
+  "name": "docker_ci",
+  "version": "1.0.0",
+  "description": "测试使用Docker / Github Webhook实现CI持续集成",
+  "main": "webhooks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/su37josephxia/docker_ci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/su37josephxia/docker_ci/issues"
+  },
+  "homepage": "https://github.com/su37josephxia/docker_ci#readme",
+  "dependencies": {
+    "github-webhook-handler": "^0.7.1"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "weixin-lesson",
+  "version": "1.0.0",
+  "description": "微信开发课程备课资料 ====",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.kaikeba.com:web_dev/weixin-lesson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "co-wechat": "^2.3.0",
+    "co-wechat-oauth": "^2.0.1",
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-jwt": "^3.5.1",
+    "koa-route": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-socket": "^4.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.5",
+    "koa-websocket": "^5.0.1",
+    "koa-xml-body": "^2.1.0",
+    "moment": "^2.23.0",
+    "mongoose": "^5.4.4",
+    "promise-redis": "0.0.5",
+    "pug": "^2.0.3",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "socket.io": "^2.2.0",
+    "watch": "^1.0.2",
+    "wechat": "^2.1.0",
+    "wechat-oauth": "^1.5.0",
+    "xml2js": "^0.4.19"
+  }
+}

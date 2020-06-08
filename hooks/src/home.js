@@ -1,26 +1,25 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import Header from './components/context/Header'
-import Footer from './components/context/Footer'
-import './app.css'
+import React, { useState, useEffect } from "react";
+import Child from "./components/child";
 
-export default class home extends Component {
-    render() {
-        return (
-            <div className="content">
-                <div>
-                    我是导航组件
-                    <br />
-                    <Link to='/yuan'>正常组件</Link>
-                    <br />
-                    <Link to='/next'>useState组件</Link>
-                </div>
-                <div>
-                    useContext练习
-                    <Header />
-                    <Footer />
-                </div>
-            </div>
-        )
-    }
+function Home() {
+  const [title, setTitle] = useState("我是title");
+
+  // 相当于 componentDidMount 和 componentDidUpdate:
+  useEffect(() => {
+    // 使用浏览器的 API 更新页面标题
+    document.title = `You clicked ${title} times`;
+  });
+
+  return (
+    <div>
+      我是首页组件
+      <br />
+      {title}
+      <br />
+      <button onClick={() => setTitle("点完我")}>点击我</button>
+      <Child name="子组件" />
+    </div>
+  );
 }
+
+export default Home;

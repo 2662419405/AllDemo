@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div>
-                我是Header组件
-            </div>
-        )
-    }
+function header() {
+  return <div>
+      头部组件
+  </div>;
 }
+
+export default header;

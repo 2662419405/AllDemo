@@ -1,0 +1,14 @@
+.user-container{
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+button{
+  margin-top: 10px;
+}

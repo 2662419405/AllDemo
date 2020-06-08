@@ -1,0 +1,69 @@
+.view-wrapper {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.list {
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #ddd;
+  list-style-type: none;
+  text-align: center;
+  background: #eee;
+}
+
+.item {
+  display: flex;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  background: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2524310803,1539750984&fm=26&gp=0.jpg") -20px
+    center;
+  background-size: cover;
+  outline: none;
+}
+
+.bubble {
+  padding: 7px 10px;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 420px;
+  min-width: 40px;
+  margin: 0 20px 0 5px;
+}
+
+.bubble p {
+  margin: 0;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.bubble:before {
+  content: "";
+  border-style: solid;
+  border-width: 0 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 3px;
+}

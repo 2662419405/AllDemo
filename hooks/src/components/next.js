@@ -1,18 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function Hooks(){
-
-    const [buttonText,sethandlerClick] = useState('click me!')
-
-    function handlerClick(){
-        return sethandlerClick('感谢')
-    }
-
+export default function next() {
     return (
-        <button
-            onClick = {handlerClick}
-        >
-            {buttonText}
-        </button>
+        <div>
+            123
+        </div>
     )
 }

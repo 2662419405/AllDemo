@@ -1,27 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      buttonText: '点击我'
-    }
-    this.onClickChangeValue = this.onClickChangeValue.bind(this)
-  }
-  render() {
+export default function yuan() {
     return (
-      <div>
-        <button
-          onClick={this.onClickChangeValue}
-        >
-          {this.state.buttonText}
-        </button>
-      </div>
+        <div>
+            123
+        </div>
     )
-  }
-  onClickChangeValue(){
-    this.setState(()=>{
-      return { buttonText: '修改了' }
-    })
-  }
 }

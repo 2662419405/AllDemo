@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="message">
+        <button v-on:click="send">发送</button>
+        <button v-on:click="clear">清空</button>
+        <div v-for="item in list">{{item}}</div>
+    </div>
+
+    <script>
+        const host = 'http://localhost:3000'
+        var app = new Vue({
+            el: '#app',
+            data: {
+                list: [],
+                message: 'Hello Vue!'
+            },
+            methods: {
+                send: async function () {
+                    let res = await axios.post(host + '/send', {
+                        message: this.message
+                    })
+                    this.list = res.data
+                },
+                clear: async function () {
+                    let res = await axios.post(host + '/clear')
+                    this.list = res.data
+                }
+            },
+            mounted: function () {
+                setInterval(async () => {
+                    const res = await axios.get(host + '/list')
+                    this.list = res.data
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>

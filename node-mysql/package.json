@@ -1,0 +1,20 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "main": "01-run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "cpu-stat": "^2.0.1",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.7.4",
+    "socket.io": "^2.2.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "localStorge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "_js-base64@2.5.2@js-base64": "^2.5.2",
+    "_moment@2.26.0@moment": "^2.26.0",
+    "js-base64": "^2.5.2",
+    "moment": "^2.26.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,42 @@
+<div class="nav">
+    <div class="left-logo">
+        <a><img src="https://img.kaikeba.com/logo-new.png"></a>
+    </div>
+    <div class="right-view">
+        <div id="menu-item-vip">
+            <a href class="menu-item">·VIP+</a>
+            <div class="menu-vip" style="display: none;">
+                <div class="menu-arrow"></div>
+                <div class="menu-content">
+                    <p class="vip-title">VIP课程</p>
+                    <div class="course-list">
+                        {{#each vipCourses}}
+                            <a class="course-list-item" href="{{url}}">
+                                <img class="course-img" src="{{icon}}">
+                                <div class="course-text">
+                                    <p class="course-name">{{name}}</p>
+                                    <p class="course-describe">{{description}}</p>
+                                </div>
+                            </a>
+                        {{/each}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="menu-item" href="/open-courses">公开课</a>
+        <a class="menu-item" href="/student">学习中心</a>
+    </div>
+</div>
+
+{{#contentFor 'jquery'}}
+<script>
+    $('#menu-item-vip')
+        .on('mouseenter', function () {
+            $('.menu-vip').show();
+        })
+        .on('mouseleave', function () {
+            $('.menu-vip').hide();
+        })
+</script>
+{{/contentFor}}

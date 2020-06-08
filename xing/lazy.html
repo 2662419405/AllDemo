@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #container{
+      margin-top:300px;
+      margin-bottom: 300px
+    }
+    .img-container{
+      
+      height:2000px;
+    }
+    img{
+      display: block;
+    }
+
+    #id{
+      width:100px;
+    }
+  </style>
+</head>
+<body>
+  <div id='container'>
+    <div class="img-container">
+        <img  data-src="./01.jpeg" alt="">
+
+    </div>
+    <div class="img-container">
+        <img  data-src="./02.jpg" alt="">
+
+    </div>
+    <div class="img-container">
+        <img  data-src="./03.jpeg" alt="">
+
+    </div>
+  </div>
+  <script>
+    const imgs = document.querySelectorAll('img')
+    // 获取可视区域高度
+    const viewHeight = window.innerHeight || window.documentElement.clientHeight
+    console.log(viewHeight,imgs)
+    num = 0
+    function loadImg(){
+      for(let i=0; i<imgs.length;i++){
+        console.log(imgs[i].getBoundingClientRect().top)
+        let dis = viewHeight - imgs[i].getBoundingClientRect().top
+        if(dis>0){
+          imgs[i].src = imgs[i].getAttribute('data-src')
+          num = i+1
+        }
+      }
+    }
+    loadImg()
+    // 节流
+    window.addEventListener('scroll',loadImg)
+  </script>
+
+  <script>
+    new Vue({
+      created(){
+        this.xx =xx
+      }
+    })
+  </script>
+</body>
+</html>

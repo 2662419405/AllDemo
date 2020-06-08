@@ -1,0 +1,43 @@
+<!--欢迎视频-->
+{{#if showVideo}}
+<video id="home-banner-video" autoplay muted>
+    <source src="https://img.kaikeba.com/slogan_new.mp4" type="video/mp4">
+</video>
+{{/if}}
+
+
+<!--vip课程列表-->
+<div class="vip-course-box">
+    <div class="vip-course-text">
+        <h1>精品课程，全新升级</h1>
+        <p>系统化名师授课，前沿性方法教学，班级化学员管理，实战性成果校验</p>
+    </div>
+    <div class="vip-course-list">
+        {{#each list}}
+        <div class="vip-course-item" style="background-image: url({{poster}});">
+            <div class="right-img"></div>
+            <div class="left-text">
+                <p class="course-name">{{name}}</p>
+                <p class="course-describe">{{description}}</p>
+                <div class="cooperate-company">
+                    <span>学员去向企业：</span>
+                    {{#each cooperation}}
+                    <img src="{{.}}">
+                    {{/each}}
+                </div>
+                <img class="arrow" src="https://img.kaikeba.com/arrow.png">
+            </div>
+        </div>
+        {{/each}}
+
+        
+    </div>
+</div>
+
+{{#contentFor 'jquery'}}
+<script>
+    $('#home-banner-video').on('ended', function(){
+        $(this).remove();
+    })
+</script>
+{{/contentFor}}

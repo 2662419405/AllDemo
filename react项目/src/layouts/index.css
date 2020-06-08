@@ -1,0 +1,24 @@
+.header {
+  color: white;
+}
+.content {
+  margin: 16px;
+}
+.box {
+  padding: 24px;
+  background: #fff;
+  min-height: 500px;
+}
+.footer {
+  text-align: center;
+}
+
+.logo {
+  float: left;
+  width: 160px;
+  margin: 16px 16px 0 0;
+}
+
+.cart{
+  float: right;
+}

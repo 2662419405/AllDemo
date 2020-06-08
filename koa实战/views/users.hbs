@@ -1,0 +1,30 @@
+{{!-- 1.插值绑定 --}}
+<h1>{{subTitle}}</h1>
+
+{{!-- 2.注释 --}}
+
+{{!-- 3.HTML内容 --}}
+<p>{{{htmlStr}}}</p>
+
+{{!-- 4.条件语句 --}}
+{{#if isShow}}
+<p>{{username}}，欢迎你！</p>
+{{else}}
+<a href>请登录</a>
+{{/if}}
+
+{{!-- 5.循环 --}}
+<ul>
+    {{#each users}}
+    <li>{{username}} - {{age}} - {{date birth 'YYYY/MM/DD'}}</li>
+    {{/each}}
+</ul>
+
+
+{{#contentFor 'jquery'}}
+<script>
+    $(function(){
+        console.log('content for jQuery')
+    })
+</script>
+{{/contentFor}}

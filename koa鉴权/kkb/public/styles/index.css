@@ -1,0 +1,209 @@
+body,
+ul,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ecf2f5;
+}
+
+a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+.nav {
+  position: absolute;
+  right: 150px;
+  top: 0;
+  width: 650px;
+  background-color: #fff;
+}
+
+.left-logo img {
+  height: 30px;
+  margin: 20px 30px;
+}
+
+.left-logo,
+.left-logo a {
+  float: left;
+}
+
+.right-view {
+  float: right;
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-item {
+  padding: 0 20px;
+  display: block;
+  height: 73px;
+  line-height: 73px;
+}
+
+/*vip下拉菜单*/
+img.course-img {
+  width: 50px;
+}
+
+.menu-vip {
+  width: 650px;
+  position: absolute;
+  z-index: 10000;
+  right: 0;
+}
+
+.menu-arrow {
+  border: 8px solid transparent;
+  border-bottom-color: white;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -6px;
+  left: 388px;
+}
+
+.menu-content {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+p.vip-title {
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.course-list {
+  overflow: hidden;
+  padding: 15px 0;
+}
+.course-list-item {
+  float: left;
+  margin: 10px;
+}
+img.course-img {
+  float: left;
+  margin-left: 16px;
+}
+
+.course-text {
+  float: left;
+}
+
+.course-text {
+  width: 220px;
+  margin-left: 12px;
+}
+
+.course-list-item p.course-name {
+  font-size: 14px;
+  color: #909090;
+}
+
+p.course-describe {
+  color: #ababab;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#home-banner-video {
+  position: fixed;
+  z-index: 200000;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin-top: -64px;
+}
+
+.vip-course-text > h1 {
+  color: #00aff2;
+  font-size: 38px;
+  font-weight: normal;
+}
+
+.vip-course-box {
+  margin-top: 124px;
+}
+
+.vip-course-text {
+  margin: 0 16% 20px;
+}
+
+.vip-course-text > p {
+  color: #00aff2;
+  font-size: 28px;
+}
+
+.vip-course-list {
+  margin: 0 16%;
+}
+
+.vip-course-item {
+  position: relative;
+  height: 370px;
+  margin-bottom: 20px;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.right-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.left-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 42%;
+  background: #191a1b;
+  padding: 40px 30px 30px;
+  box-sizing: border-box;
+}
+
+.left-text > p {
+  color: white;
+}
+
+p.course-name {
+  font-size: 32px;
+}
+
+.cooperate-company > span {
+  color: white;
+}
+
+.cooperate-company > img {
+  height: 16px;
+}
+
+img.arrow {
+  margin-top: 5px;
+  position: absolute;
+  right: 30px;
+  bottom: 36px;
+}
+
+.cooperate-company {
+  position: absolute;
+  bottom: 30px;
+}
+
