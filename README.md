@@ -24,7 +24,7 @@
 ## 数据可视化学习
 
 1. canvas验证码  [验证码](/data/canvas)
-2. svg矢量图绘制 [svg](/data/svg)
+2. svg矢量图绘制 [svg](/data/svg/index.html)
  
 ## 实战篇
 
