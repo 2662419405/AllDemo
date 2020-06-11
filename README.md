@@ -4,7 +4,7 @@
 
 </div>
 
-> 说明: :100: 本项目包含常用的技术点和技术栈,时间为2020年度最新的技术栈,大范围的包含(Vue,Vuex,SSR,vue源码解析,vue实战,vue单元测试,ts,React入门,react全家桶,react组件,react源码解析,redux,react-router,node基础,node网络编程,node持久化mysql,node持久化mongodb,node部署,pm2,koa实战,微信小程序,网络安全,RN,Flutter,webpack,微信公众号,自动化测试,前端性能优化,数据结构算法)
+> 说明: :100: 本项目包含常用的技术点和技术栈,时间为2020年度最新的技术栈,大范围的包含(Vue,Vuex,SSR,vue源码解析,vue实战,vue单元测试,ts,React入门,react全家桶,react组件,react源码解析,redux,react-router,node基础,node网络编程,node持久化mysql,node持久化mongodb,node部署,pm2,koa实战,微信小程序,网络安全,RN,Flutter,webpack,微信公众号,自动化测试,前端性能优化,数据结构算法),包含小的html,css,js的设计模式等方向,**数据可视化(最新增加)**
 
 * 选择哪个Demo,都需要进入对应的目录下面安装 `yarn` or `npm i`
 
@@ -20,6 +20,10 @@
 8. 实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
 9. 图片上传操作七牛云 [图片上传](/base/file/README.md)
 10. localStorage的过期时间处理 [localStorage过期](/base/localStorge/index.js)
+
+## 数据可视化学习
+
+1. canvas
  
 ## 实战篇
 

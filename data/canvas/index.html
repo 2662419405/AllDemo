@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>验证码</h4>
+    <canvas id="yan" height="40" width="120"></canvas>
+    <script>
+        // 1. 随机数
+        function getRn(min, max) {
+            return parseInt(Math.random() * (max - min) + min)
+        }
+        // 2. 随机颜色
+        function rc(min, max) {
+            var r = getRn(min, max);
+            var g = getRn(min, max);
+            var b = getRn(min, max);
+            return `rgb(${r},${g},${b})`
+        }
+        // 3. 背景颜色
+        var w = 120;
+        var h = 40;
+        var can = document.getElementById('yan')
+        var ctx = can.getContext("2d")
+        ctx.fillStyle = rc(180, 230)
+        ctx.fillRect(0, 0, w, h)
+        can.onclick = function () {
+            ctx.clearRect(0, 0, 120, 40)
+            drawStr()
+            drawLine()
+            drawDian()
+        }
+        window.onload = function () {
+            drawStr()
+            drawLine()
+            drawDian()
+        }
+        // 4. 随机字符串
+        function drawStr() {
+            var pool = "ABCDEFGHIJKLIMNOPQRSTUVWSYZ1234567890";
+            for (let i = 0; i < 4; i++) {
+                var c = pool[getRn(0, pool.length)] //字
+                var fs = getRn(18, 40) //  字体大小
+                var deg = getRn(-30, 30) // 字体旋转的角度
+                ctx.font = fs + 'px Simhei'
+                ctx.textBaseline = 'top'
+                ctx.fillStyle = rc(80, 150)
+                ctx.save()
+                ctx.translate(30 * i + 15, 15)
+                ctx.rotate(deg * Math.PI / 180)
+                ctx.fillText(c, -15 + 5, -15)
+                ctx.restore()
+            }
+        }
+        // 5. 干扰线
+        function drawLine() {
+            for (let i = 0; i < 10; i++) {
+                ctx.beginPath()
+                ctx.moveTo(getRn(0, w), getRn(0, h))
+                ctx.lineTo(getRn(0, w), getRn(0, h))
+                ctx.strokeStyle = rc(180, 230)
+                ctx.closePath()
+                ctx.stroke()
+            }
+        }
+
+        // 6. 干扰小点
+        function drawDian() {
+            for (let i = 0; i < 50; i++) {
+                ctx.beginPath()
+                ctx.arc(getRn(0, w), getRn(0, h), 1, 0, 2 * Math.PI)
+                ctx.closePath()
+                ctx.fillStyle = rc(150, 200)
+                ctx.stroke()
+            }
+        }
+    </script>
+    <!--     
+    <canvas id="canvas" height="800" width="800"></canvas>
+    <script>
+        var can = document.getElementById("canvas")
+        var ctx = can.getContext("2d") // 获取canvas对象
+        ctx.fillStyle = "red"; // 填充色为红色
+        ctx.fillRect(0, 0, 50, 50) //填充一个矩形
+
+        // 绘制线条
+        ctx.beginPath();
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'blue';
+        ctx.moveTo(100, 100) //起点坐标
+        ctx.lineTo(250, 75) // 线条
+        ctx.stroke()
+        ctx.lineWidth = 2
+        ctx.lineTo(300, 100)
+        ctx.stroke()
+
+        // 绘制圆形
+        ctx.beginPath()
+        ctx.fillStyle = 'green';
+        ctx.lineWidth = 5
+        ctx.arc(200, 200, 50, 0, 2 * Math.PI)
+        ctx.stroke()
+        ctx.fill()
+
+        // 绘制点
+        ctx.beginPath();
+        ctx.lineWidth = 1
+        ctx.fillStyle = '#000'
+        ctx.moveTo(300, 300)
+        ctx.lineTo(301, 301)
+        ctx.stroke()
+    </script> -->
+</body>
+
+</html>
