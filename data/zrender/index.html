@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zrender/4.3.1/zrender.min.js"></script>
+</head>
+
+<body>
+    <div id="cantainer" style="height: 500px; width: 500px;"></div>
+    <script>
+        const zr = zrender.init(document.getElementById("cantainer"))
+        const rect = new zrender.Rect({
+            shape: {
+                x: 0,
+                y: 0,
+                width: 50,
+                height: 50
+            },
+            style: {
+                fill: 'red',
+                lineWidth: 0
+            }
+        })
+        const line = new zrender.Polyline({
+            shape: {
+                points: [
+                    [100, 100],
+                    [250, 75],
+                    [300, 100]
+                ]
+            },
+            style: {
+                stroke: 'blue',
+                lineWidth: 1
+            }
+        })
+        const circle = new zrender.Circle({
+            shape: {
+                cx: 200,
+                cy: 200,
+                r: 50
+            },
+            style: {
+                fill: 'red',
+                stroke: 'green',
+                lineWidth: 2
+            }
+        })
+        zr.add(rect)
+        zr.add(line)
+        zr.add(circle)
+    </script>
+</body>
+
+</html>

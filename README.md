@@ -25,6 +25,8 @@
 
 1. canvas验证码  [验证码](/data/canvas)
 2. svg矢量图绘制 [svg](/data/svg/index.html)
+3. zender [zender](/data/zender/index.html)
+4. canvas进行img图片压缩 [图片压缩](/data/canvasCompressImg/index.html)
  
 ## 实战篇
 
