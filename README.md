@@ -27,7 +27,10 @@
 2. svg矢量图绘制 [svg](/data/svg/index.html)
 3. zender [zender](/data/zender/index.html)
 4. canvas进行img图片压缩 [图片压缩](/data/canvasCompressImg/index.html)
- 
+5. G2绘图 [G2](/data/G2/g2.html)
+6. G6绘图 [G6](/data/G6/g6.html)
+7. I7地图编写 [I7](/data/I7/I7.html)
+
 ## 实战篇
 
 | 名称                |                        源码                        |                                                                  线上网址 |                       技术栈 |

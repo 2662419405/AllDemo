@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/@antv/l7"></script>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="l7-map"></div>
+  <script>
+    const scene = new L7.Scene({
+      id: 'l7-map',
+      map: new L7.GaodeMap({
+        // style: 'dark',
+        center: [120.19382669582967, 30.258134],
+        pitch: 0,
+        zoom: 6,
+        token: '	f08ebcea0a8bf0bca6048d7844e4a4a7'
+      })
+    });
+    scene.on('loaded', function () {
+      fetch(
+          'https://gw.alipayobjects.com/os/basement_prod/337ddbb7-aa3f-4679-ab60-d64359241955.json'
+        )
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          data.features = data.features.filter(item => item.properties.capacity > 1000);
+          const pointLayer = new L7.PointLayer({})
+            .source(data)
+            .shape('circle')
+            .size('capacity', [0, 16])
+            .color('capacity', [
+              '#34B6B7',
+              '#4AC5AF',
+              '#5FD3A6',
+              '#7BE39E',
+              '#A1EDB8',
+              '#CEF8D6'
+            ])
+            .style({
+              strokeWidth: 0,
+              opacity: 0.5
+            })
+            .active(true);
+
+          scene.addLayer(pointLayer);
+        });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.js"></script>
+  </head>
+  <body>
+    <div id="g2-chart"></div>
+    <script>
+      const data = [
+        { year: '1991', value: 3 },
+        { year: '1992', value: 4 },
+        { year: '1993', value: 3.5 },
+        { year: '1994', value: 5 },
+        { year: '1995', value: 4.9 },
+        { year: '1996', value: 6 },
+        { year: '1997', value: 7 },
+        { year: '1998', value: 9 },
+        { year: '1999', value: 13 },
+      ];
+      const chartDom = document.getElementById('g2-chart');
+      const line = new G2Plot.Line(chartDom, {
+        title: {
+          visible: true,
+          text: 'g2折线图示例'
+        },
+        description: {
+          visible: true,
+          text: '折线图示例，这是一个副标题'
+        },
+        data,
+        xField: 'year',
+        yField: 'value',
+        point: {
+          visible: true,
+          size: 5,
+          color: '#fff',
+          style: {
+            stroke: '#fe740c',
+            lineWidth: 2,
+            fillOpacity: 0.6
+          }
+        },
+        label: {
+          visible: true
+        },
+        color: '#f2740c',
+        yAxis: {
+          formatter: (v) => {
+            return `${v}k`;
+          }
+        }
+      });
+      line.render();
+    </script>
+  </body>
+</html>
