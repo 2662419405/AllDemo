@@ -522,17 +522,18 @@
 </head>
 
 <body>
-    <div id="root" style="height: 500px; width: 500px;">
+    <div id="root" style="height: 500px; width: 800px;">
 
     </div>
 
     <script>
         var charts = echarts.init(document.getElementById('root'), 'walden', {
-            renderer: 'svg'
+            renderer: 'canvas'
         })
         charts.setOption({
             title: {
-                text: "尝试Echarts"
+                text: "尝试Echarts",
+                subtext: "副标题"
             },
             xAxis: {
                 data: ["衬衫",
@@ -542,6 +543,20 @@
                 ]
             },
             yAxis: {},
+            dataZoom: [{
+                show: true,
+                start: 0,
+                end: 100
+            }],
+            legend: {
+                data: [{
+                    name: "分类",
+                    icon: 'circle',
+                    textStyle: {
+                        color: 'red'
+                    }
+                }, '柱状图', '折线图'],
+            },
             // echarts 4 新特性 数据集
             dataset: {
                 source: [
@@ -551,11 +566,21 @@
                     ["裤子", 10, 31, "裤子", 20]
                 ],
             },
+            toolbox: {
+                feature: {
+                    restore: {},
+                    saveAsImage: {},
+                    dataZoom: {
+                        yAxisIndex: false
+                    }
+                }
+            },
             series: [{
+                name: '分类',
                 type: 'pie',
                 center: [
                     '65%',
-                    60
+                    '20%'
                 ],
                 radius: 35,
                 encode: {
@@ -563,12 +588,14 @@
                     value: 4
                 }
             }, {
+                name: '折线图',
                 type: 'line',
                 encode: {
                     x: 0,
                     y: 1
                 }
             }, {
+                name: '柱状图',
                 type: 'bar',
                 encode: {
                     x: 0,

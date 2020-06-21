@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="root" style="height: 500px; width: 800px;"></div>
+    <script>
+        var charts = echarts.init(document.getElementById('root'))
+        charts.setOption({
+            title: {
+                text: "散点图"
+            },
+            xAxis: {},
+            yAxis: {},
+            dataset: {
+                source: [
+                    [23, 42],
+                    [45, 21],
+                    [51, 23],
+                    [15, 31],
+                    [21, 52]
+                ]
+            },
+            series: [{
+                type: 'scatter',
+                encode: {
+                    x: 0,
+                    y: 1
+                }
+            }]
+        })
+    </script>
+</body>
+
+</html>

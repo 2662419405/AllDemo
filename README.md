@@ -30,7 +30,7 @@
 5. G2绘图 [G2](/data/G2/g2.html)
 6. G6绘图 [G6](/data/G6/g6.html)
 7. I7地图编写 [I7](/data/I7/I7.html)
-8. echarts **主题定制,dataset新特性,多系列主题** [echarts](/data/echarts/index.html)
+8. echarts **全部echarts案例** [echarts](/data/echarts/index.html)
 
 ## 实战篇
 

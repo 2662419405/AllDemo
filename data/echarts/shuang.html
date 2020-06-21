@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="root" style="height: 500px; width: 800px;"></div>
+    <script>
+        var charts = echarts.init(document.getElementById('root'))
+        charts.setOption({
+            grid: [{
+                bottom: '55%'
+            }, {
+                top: '55%'
+            }],
+            title: {
+                text: "双坐标系"
+            },
+            dataset: {
+                source: [
+                    ['product', '2012', '2013', '2014', '2015'],
+                    ['Latte', 41.1, 30.4, 65.1, 25.3],
+                    ['Tea', 76.4, 26.8, 47.2, 24.6]
+                ]
+            },
+            xAxis: [{
+                type: 'category',
+                gridIndex: 0
+            }, {
+                type: 'category',
+                gridIndex: 1
+            }],
+            yAxis: [{
+                gridIndex: 0
+            }, {
+                splitLine: false,
+                gridIndex: 0
+            }, {
+                min: 0,
+                max: 150,
+                gridIndex: 1
+            }],
+            series: [{
+                type: 'bar',
+                seriesLayoutBy: 'row',
+                yAxisIndex: 0,
+                xAxisIndex: 0
+            }, {
+                type: 'line',
+                seriesLayoutBy: 'row',
+                yAxisIndex: 1,
+                xAxisIndex: 0
+            }, {
+                type: 'bar',
+                seriesLayoutBy: 'row',
+                yAxisIndex: 2,
+                xAxisIndex: 1
+            }]
+        })
+    </script>
+</body>
+
+</html>
