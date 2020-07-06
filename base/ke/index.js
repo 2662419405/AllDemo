@@ -5,7 +5,7 @@ function currying(func) {
   return function result(...rest) {
     if (rest.length === 0) return func(...args);
     args.push(...rest);
-    return result;
+    return result;  
   };
 }
 
