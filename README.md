@@ -66,7 +66,7 @@
 7. github 学习 koa -> [koa](/koaGithub)
 8. vueSSR 渲染 -> [nuxt](/nuxt)
 9. vue 原生 ssr -> [ssr](/ssr)
-10. vue ts 测试 -> [vue-ts](/vue-ts)
+10. vue ts -> [vue-ts](/vue-ts)
 11. vue 单元测试 -> [vue-demo](/ts-demo)
 
 **React 阶段**
