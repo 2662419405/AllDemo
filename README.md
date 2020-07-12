@@ -84,11 +84,11 @@
 
 **node 阶段**
 
-1.  node 基础课程 -> [node 基础](/node基础)
-2.  node 持久化 mysql -> [node-mysql](/node-mysql)
-3.  node 持久化 mongodb -> [mongodb](/node-mongo)
-4.  koa 实战 -> [koa 实战](/koa实战)
-5.  koa 鉴权 -> [koa 鉴权](/koa鉴权)
+1. node 基础课程 -> [node 基础](/node基础)
+2. node 持久化 mysql -> [node-mysql](/node-mysql)
+3. node 持久化 mongodb -> [mongodb](/node-mongo)
+4. koa 实战 -> [koa 实战](/koa实战)
+5. koa 鉴权 -> [koa 鉴权](/koa鉴权)
 
 **前端综合**
 
