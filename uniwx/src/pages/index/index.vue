@@ -4,6 +4,8 @@
 		<view>
 			<text class="title">{{title}}</text>
 		</view>
+		<text class="iconfont">&#xe624;</text>
+		<text @click="changeRouter('/pages/set/index')">去我的页面</text>
 	</view>
 </template>
 
@@ -18,7 +20,12 @@
 
 		},
 		methods: {
-
+			changeRouter(route){
+				uni.navigateTo({
+					url:'../set/index'
+				})
+				// this.$mRouter.push({route})
+			}
 		}
 	}
 </script>

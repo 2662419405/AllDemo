@@ -1,19 +1,15 @@
-# uniwx
+**踩坑记录**
 
-## Project setup
-```
-yarn install
-```
+1. 阿里巴巴适量图标库
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+2. 路由
 
-### Compiles and minifies for production
-```
-yarn build
-```
+3. 登录
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+4. 自定义组件
+
+5. store
+
+6. UI库的使用
+
+7. UI库表单的使用

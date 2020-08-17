@@ -13,5 +13,15 @@
 </script>
 
 <style>
-	/*每个页面公共css */
+/*导入字体图标*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('~@/static/iconfont.ttf') format('truetype');
+}
+/*设置字体图标*/
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1em;
+    font-style: normal;
+}
 </style>
