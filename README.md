@@ -4,7 +4,7 @@
 
 </div>
 
-> 说明: :100: 本项目包含常用的技术点和技术栈,时间为 2020 年度最新的技术栈,大范围的包含(Vue,Vuex,SSR,vue 源码解析,vue 实战,vue 单元测试,ts,React 入门,react 全家桶,react 组件,react 源码解析,redux,react-router,node 基础,node 网络编程,node 持久化 mysql,node 持久化 mongodb,node 部署,pm2,koa 实战,微信小程序,网络安全,RN,Flutter,webpack,微信公众号,自动化测试,前端性能优化,数据结构算法),包含小的 html,css,js 的设计模式等方向,**数据可视化(最新增加)**
+> 说明: :100: 本项目包含常用的技术点和技术栈,时间为 2020 年度最新的技术栈,大范围的包含(Vue,Vuex,SSR,vue 源码解析,vue 实战,vue 单元测试,ts,React 入门,react 全家桶,react 组件,react 源码解析,redux,react-router,node 基础,node 网络编程,node 持久化 mysql,node 持久化 mongodb,node 部署,pm2,koa 实战,微信小程序,网络安全,RN,Flutter,webpack,微信公众号,自动化测试,前端性能优化,数据结构算法),包含小的 html,css,js 的设计模式等方向,**数据可视化(最新增加),多端uniapp测试**
 
 - 选择哪个 Demo,都需要进入对应的目录下面安装 `yarn` or `npm i`
 
@@ -105,6 +105,7 @@
 2. 微信 oauth -> [weixin2](/weixin2)
 3. 微信小程序初步学习 -> [xiaochengxu](/xiaochengxu)
 4. 微信云开发练习 -> [yun](/yun)
+5. uniapp多端开发WX小程序 -> [uni-wx](/uniwx) 
 
 ## License
 
