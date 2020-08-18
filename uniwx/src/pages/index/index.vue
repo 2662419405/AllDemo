@@ -6,6 +6,7 @@
 		</view>
 		<text class="iconfont">&#xe624;</text>
 		<text @click="changeRouter('/pages/set/index')">去我的页面</text>
+		<rm-image :title="title"></rm-image>
 	</view>
 </template>
 
@@ -13,7 +14,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello1'
 			}
 		},
 		onLoad() {

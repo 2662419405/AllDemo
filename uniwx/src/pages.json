@@ -9,15 +9,18 @@
     {
       "path": "pages/my/index",
       "style": {
-        "navigationBarTitleText": "我的"
+        "navigationBarTitleText": "我的",
+        "usingComponents": {
+          "van-button": "/wxcomponents/vant/dist/button/index"
+        }
       }
-	},
-	{
-		"path": "pages/set/index",
-		"style": {
-		  "navigationBarTitleText": "设置"
-		}
-	  }
+    },
+    {
+      "path": "pages/set/index",
+      "style": {
+        "navigationBarTitleText": "设置"
+      }
+    }
   ],
   "tabBar": {
     "color": "#7A7E83",
