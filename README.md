@@ -107,6 +107,10 @@
 4. 微信云开发练习 -> [yun](/yun)
 5. uniapp多端开发WX小程序 -> [uni-wx](/uniwx) 
 
+**微信公众号开发**
+
+1. 公众号测试 -> [wx-gong](wx-gong)
+
 ## License
 
 [MIT](/LICENSE)
