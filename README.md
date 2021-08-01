@@ -20,6 +20,7 @@
 8. 实现 mergePromise 函数，把传进去的数组顺序先后执行 [mergePromise](/base/mergePromise/index.js)
 9. 图片上传操作七牛云 [图片上传](/base/file/README.md)
 10. localStorage 的过期时间处理 [localStorage 过期](/base/localStorge/index.js)
+11. 性能优化记录篇 -> [性能优化](/base/Performance)
 
 ## 数据可视化学习
 
